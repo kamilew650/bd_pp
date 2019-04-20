@@ -1,0 +1,14 @@
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/bin/Debug/netcoreapp2.2/PublicTransportApi.deps.json
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/bin/Debug/netcoreapp2.2/PublicTransportApi.runtimeconfig.json
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/bin/Debug/netcoreapp2.2/PublicTransportApi.runtimeconfig.dev.json
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/bin/Debug/netcoreapp2.2/PublicTransportApi.dll
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/bin/Debug/netcoreapp2.2/PublicTransportApi.pdb
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.csprojAssemblyReference.cache
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.csproj.CoreCompileInputs.cache
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.RazorAssemblyInfo.cache
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.RazorAssemblyInfo.cs
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.AssemblyInfoInputs.cache
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.AssemblyInfo.cs
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.RazorTargetAssemblyInfo.cache
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.dll
+/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/Debug/netcoreapp2.2/PublicTransportApi.pdb

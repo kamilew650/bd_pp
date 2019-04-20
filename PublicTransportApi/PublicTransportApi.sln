@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicTransportApi", "PublicTransportApi\PublicTransportApi.csproj", "{86A6F592-7345-46C3-9AB9-ED7E2668F5DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86A6F592-7345-46C3-9AB9-ED7E2668F5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A6F592-7345-46C3-9AB9-ED7E2668F5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A6F592-7345-46C3-9AB9-ED7E2668F5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A6F592-7345-46C3-9AB9-ED7E2668F5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

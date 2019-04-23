@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { AdminRoutingModule } from './admin.routing';
 import { NavbarComponent } from './navbar/navbar.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
-  declarations: [AdminComponent, NavbarComponent],
+  declarations: [AdminComponent, NavbarComponent, UsersComponent],
   imports: [
     CommonModule,
     AdminRoutingModule

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { UsersComponent } from './users/users.component';
 
 
 export const routes: Routes = [
@@ -11,6 +12,10 @@ export const routes: Routes = [
       breadcrumb: [null]
     },
     children: [
+      {
+        path: '',
+        component: UsersComponent
+      }
     ],
   }
 ]

@@ -36,4 +36,14 @@
   .login-form {
     margin-top: 200px;
   }
+  .logout-button {
+    float: right;
+  }
+  .logout-button-div {
+    margin-right: auto;
+    width: 100%;
+  }
+  .title-div {
+    min-width: 315px;
+  }
   

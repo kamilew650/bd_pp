@@ -20,5 +20,9 @@ namespace PublicTransportApi.Core.Entities
         public int TicketsCount { get; set; }
         public double UsedFuel { get; set; }
         public TimeSpan Delay { get; set; }
+
+        public Course Course { get; set; }
+        public Vehicle Vehicle { get; set; }
+        public User Driver { get; set; }
     }
 }

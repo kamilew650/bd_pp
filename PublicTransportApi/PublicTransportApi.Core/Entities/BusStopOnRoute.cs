@@ -16,5 +16,11 @@ namespace PublicTransportApi.Core.Entities
         public int BusStopId { get; set; }
         [ForeignKey("BusStopOnRoute")]
         public int PreviousBusStopOnRouteId { get; set; }
+
+        public Route Route { get; set; }
+        public BusStop BusStop { get; set; }
+        public BusStopOnRoute PreviousBusStopOnRoute { get; set; }
+
+        public ICollection<Arrival> Arrivals { get; set; }
     }
 }

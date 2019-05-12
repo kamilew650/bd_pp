@@ -14,5 +14,8 @@ namespace PublicTransportApi.Core.Entities
         public string Login { get; set; }
         public string Password { get; set; }
         public int Role { get; set; }
+
+        public ICollection<Ride> Rides { get; set; }
+        public ICollection<Failure> NotifiedFailures { get; set; }
     }
 }

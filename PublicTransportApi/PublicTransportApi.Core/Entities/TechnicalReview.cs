@@ -15,5 +15,7 @@ namespace PublicTransportApi.Core.Entities
         public DateTime Date { get; set; }
         public DateTime DueDate { get; set; }
         public bool Passed { get; set; }
+
+        public Vehicle Vehicle { get; set; }
     }
 }

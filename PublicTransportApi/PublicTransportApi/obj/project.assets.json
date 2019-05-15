@@ -4439,6 +4439,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "PublicTransportApi.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/PublicTransportApi.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicTransportApi.Common.dll": {}
+        }
+      },
       "PublicTransportApi.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -4450,6 +4460,20 @@
         },
         "runtime": {
           "bin/placeholder/PublicTransportApi.Core.dll": {}
+        }
+      },
+      "PublicTransportApi.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "PublicTransportApi.Common": "1.0.0",
+          "PublicTransportApi.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PublicTransportApi.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicTransportApi.Services.dll": {}
         }
       }
     }
@@ -12075,18 +12099,31 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "PublicTransportApi.Common/1.0.0": {
+      "type": "project",
+      "path": "../PublicTransportApi.Common/PublicTransportApi.Common.csproj",
+      "msbuildProject": "../PublicTransportApi.Common/PublicTransportApi.Common.csproj"
+    },
     "PublicTransportApi.Core/1.0.0": {
       "type": "project",
       "path": "../PublicTransportApi.Core/PublicTransportApi.Core.csproj",
       "msbuildProject": "../PublicTransportApi.Core/PublicTransportApi.Core.csproj"
+    },
+    "PublicTransportApi.Services/1.0.0": {
+      "type": "project",
+      "path": "../PublicTransportApi.Services/PublicTransportApi.Services.csproj",
+      "msbuildProject": "../PublicTransportApi.Services/PublicTransportApi.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.Extensions.Options >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "PublicTransportApi.Core >= 1.0.0"
+      "PublicTransportApi.Common >= 1.0.0",
+      "PublicTransportApi.Core >= 1.0.0",
+      "PublicTransportApi.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12119,8 +12156,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Common\\PublicTransportApi.Common.csproj": {
+              "projectPath": "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Common\\PublicTransportApi.Common.csproj"
+            },
             "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Core\\PublicTransportApi.Core.csproj": {
               "projectPath": "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Core\\PublicTransportApi.Core.csproj"
+            },
+            "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Services\\PublicTransportApi.Services.csproj": {
+              "projectPath": "D:\\Dawid\\Szkoła\\BD_PP\\Repo\\bd_pp\\PublicTransportApi\\PublicTransportApi.Services\\PublicTransportApi.Services.csproj"
             }
           }
         }
@@ -12142,6 +12185,10 @@
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.Extensions.Options": {
             "target": "Package",
             "version": "[2.2.0, )"
           },

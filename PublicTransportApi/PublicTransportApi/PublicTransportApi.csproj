@@ -8,10 +8,13 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.App" />
         <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PublicTransportApi.Common\PublicTransportApi.Common.csproj" />
       <ProjectReference Include="..\PublicTransportApi.Core\PublicTransportApi.Core.csproj" />
+      <ProjectReference Include="..\PublicTransportApi.Services\PublicTransportApi.Services.csproj" />
     </ItemGroup>
 
 </Project>

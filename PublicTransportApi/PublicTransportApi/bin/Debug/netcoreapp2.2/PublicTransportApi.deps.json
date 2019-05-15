@@ -26,8 +26,11 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
-          "PublicTransportApi.Core": "1.0.0"
+          "PublicTransportApi.Common": "1.0.0",
+          "PublicTransportApi.Core": "1.0.0",
+          "PublicTransportApi.Services": "1.0.0"
         },
         "runtime": {
           "PublicTransportApi.dll": {}
@@ -148,6 +151,14 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "PublicTransportApi.Common/1.0.0": {
+        "runtime": {
+          "PublicTransportApi.Common.dll": {}
+        },
+        "compile": {
+          "PublicTransportApi.Common.dll": {}
+        }
+      },
       "PublicTransportApi.Core/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.4"
@@ -157,6 +168,18 @@
         },
         "compile": {
           "PublicTransportApi.Core.dll": {}
+        }
+      },
+      "PublicTransportApi.Services/1.0.0": {
+        "dependencies": {
+          "PublicTransportApi.Common": "1.0.0",
+          "PublicTransportApi.Core": "1.0.0"
+        },
+        "runtime": {
+          "PublicTransportApi.Services.dll": {}
+        },
+        "compile": {
+          "PublicTransportApi.Services.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3337,7 +3360,17 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
+    "PublicTransportApi.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "PublicTransportApi.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PublicTransportApi.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

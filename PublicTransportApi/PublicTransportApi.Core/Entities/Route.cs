@@ -15,5 +15,10 @@ namespace PublicTransportApi.Core.Entities
         [ForeignKey("Line")]
         public int LineId { get; set; }
         public string Name { get; set; }
+
+        public Course Course { get; set; }
+        public Line Line { get; set; }
+
+        public ICollection<BusStopOnRoute> BusStopsOnRoute { get; set; }
     }
 }

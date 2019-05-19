@@ -1,7 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190513104544_initial.cs" />
+    <Compile Remove="Migrations\20190513112314_initial_repair.cs" />
+    <Compile Remove="Migrations\20190513112631_initial_repair1.cs" />
+    <Compile Remove="Migrations\20190513113039_initial_repair2.cs" />
+    <Compile Remove="Migrations\20190513114626_initial_repair3.cs" />
+    <Compile Remove="Migrations\20190513115401_initial_repair4.cs" />
+    <Compile Remove="Migrations\20190513115527_initial_repair5.cs" />
+    <Compile Remove="Migrations\20190513120430_initial.cs" />
+    <Compile Remove="Migrations\20190513120832_initial.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.4" />
+  </ItemGroup>
 
 </Project>

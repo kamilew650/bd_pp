@@ -16,5 +16,9 @@ namespace PublicTransportApi.Core.Entities
         public DateTime PurchaseDate { get; set; }
         public bool Available { get; set; }
         public int Seats { get; set; }
+
+        public ICollection<Failure> Failures { get; set; }
+        public ICollection<TechnicalReview> TechnicalReviews { get; set; }
+        public ICollection<Ride> Rides { get; set; }
     }
 }

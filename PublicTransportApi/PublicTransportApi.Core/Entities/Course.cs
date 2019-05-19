@@ -10,5 +10,9 @@ namespace PublicTransportApi.Core.Entities
         [Key]
         public int Id { get; set; }
         public int CourseType { get; set; }
+
+        public ICollection<Route> Routes { get; set; }
+        public ICollection<Arrival> Arrivals { get; set; }
+        public ICollection<Ride> Rides { get; set; }
     }
 }

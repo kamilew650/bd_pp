@@ -26,3 +26,10 @@ D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\obj\Debu
 D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\obj\Debug\netcoreapp2.2\PublicTransportApi.RazorAssemblyInfo.cache
 D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\obj\Debug\netcoreapp2.2\PublicTransportApi.RazorAssemblyInfo.cs
 D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\obj\Debug\netcoreapp2.2\PublicTransportApi.RazorTargetAssemblyInfo.cache
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Core.dll
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Core.pdb
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\obj\Debug\netcoreapp2.2\PublicTransportApi.csproj.CopyComplete
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Common.dll
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Services.dll
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Common.pdb
+D:\Dawid\Szkoła\BD_PP\Repo\bd_pp\PublicTransportApi\PublicTransportApi\bin\Debug\netcoreapp2.2\PublicTransportApi.Services.pdb

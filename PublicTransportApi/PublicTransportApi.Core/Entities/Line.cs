@@ -10,5 +10,7 @@ namespace PublicTransportApi.Core.Entities
         [Key]
         public int Id { get; set; }
         public string Number { get; set; }
+
+        public ICollection<Route> Routes { get; set; }
     }
 }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AdminModule } from './admin/admin.module';
+import { DriverModule } from './driver/driver.module';
 
 export const routes: Routes = [
   {
@@ -11,6 +12,10 @@ export const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => AdminModule
+  },
+  {
+    path: 'driver',
+    loadChildren: () => DriverModule
   }
 ]
 

@@ -21,10 +21,6 @@ export class LoginService {
     }
   }
 
-  // private handleUserChanged(tokenModel: TokenModel) {
-  //   this.loggedUser.next(tokenModel)
-  // }
-
   constructor(
     private httpService: CustomHttpService,
     private router: Router,
@@ -37,20 +33,15 @@ export class LoginService {
   }
 
   login(login: string, password: string) {
-    // return this.httpService
-    //   .post('/token', { login: login, password: password })
-    //   .toPromise()
-    //   .map((response: Response) => {
-    //     const tokenModel = response.json()
-    //     this.handleUserChanged(tokenModel)
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     if (error.status == 500 || error.status == 0 || !error.json)
-    //       return Observable.throw({
-    //         error: 'Błąd serwera. Spróbuj ponownie później.'
-    //       })
-    //     else return Observable.throw(error.json())
-    //   })
+    return this.httpService
+      .post('/token', { login: login, password: password })
+      .toPromise()
+      .then((response: Response) => {
+        const tokenModel = response.json()
+        return tokenModel
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 }

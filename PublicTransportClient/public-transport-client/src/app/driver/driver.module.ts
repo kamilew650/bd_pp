@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AdminComponent } from '../admin/admin.component';
-import { AdminRoutingModule } from '../admin/admin.routing';
+import { DriverRoutingModule } from './driver.routing';
+import { DriverComponent } from './driver.component';
 
 @NgModule({
-  declarations: [AdminComponent, NavbarComponent],
+  declarations: [NavbarComponent, DriverComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule,
+    DriverRoutingModule,
     NgbModule
   ]
 })

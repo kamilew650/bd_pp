@@ -10,6 +10,9 @@ import { AdminModule } from './admin/admin.module';
 import { HttpClientModule } from '@angular/common/http';
 import { Driver } from 'selenium-webdriver/safari';
 import { DriverModule } from './driver/driver.module';
+import { LoginService } from './services/login.service';
+import { CustomHttpService } from './services/custom-http.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,7 @@ import { DriverModule } from './driver/driver.module';
     HttpClientModule,
     DriverModule
   ],
-  providers: [],
+  providers: [LoginService, CustomHttpService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

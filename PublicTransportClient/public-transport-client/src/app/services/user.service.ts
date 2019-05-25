@@ -8,18 +8,7 @@ import { CookieService } from "ngx-cookie-service"
 
 
 @Injectable()
-export class LoginService {
-
-  loggedUser
-  tokenModel
-
-  get token() {
-    if (this.cookieService.get('te_token')) {
-      return this.cookieService.get('te_token')
-    } else {
-      this.router.navigate(['/login'])
-    }
-  }
+export class UserService {
 
   constructor(
     private httpService: CustomHttpService,
@@ -32,7 +21,7 @@ export class LoginService {
     return this.cookieService.get('te_token')
   }
 
-  login(login: string, password: string) {
+  getUsers() {
     // return this.httpService
     //   .post('/token', { login: login, password: password })
     //   .toPromise()
@@ -46,5 +35,33 @@ export class LoginService {
     return new Promise((resolve, reject) => {
       resolve({ role: "admin" })
     })
+  }
+
+  getUser(id: string) {
+    // return this.httpService
+    //   .post('/token', { login: login, password: password })
+    //   .toPromise()
+    //   .then((response: Response) => {
+    //     const tokenModel = response.json()
+    //     return tokenModel
+    //   })
+    //   .catch(error => {
+    //     console.error(error)
+    //   })
+    return new Promise((resolve, reject) => {
+      resolve({ role: "admin" })
+    })
+  }
+
+  addUser(id: string) {
+
+  }
+
+  updateUser(id: string) {
+
+  }
+
+  deleteUser(id: string) {
+
   }
 }

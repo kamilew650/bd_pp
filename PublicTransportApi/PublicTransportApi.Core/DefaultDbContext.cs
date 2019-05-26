@@ -29,7 +29,7 @@ namespace PublicTransportApi.Core
         {
             modelBuilder.Entity<Arrival>().ToTable("Arrival");
             modelBuilder.Entity<BusStop>().ToTable("BusStop");
-            //modelBuilder.Entity<BusStopOnRoute>().ToTable("BusStopOnRoute").HasOne(x=>x.PreviousBusStopOnRoute).WithOne(y=>y.NextBusStopOnRoute).OnDelete(DeleteBehavior.ClientSetNull).HasForeignKey<BusStopOnRoute>(p=>p.PreviousBusStopOnRouteId);
+            modelBuilder.Entity<BusStopOnRoute>().ToTable("BusStopOnRoute");//.HasOne(x=>x.PreviousBusStopOnRoute).WithOne(y=>y.NextBusStopOnRoute).OnDelete(DeleteBehavior.ClientSetNull).HasForeignKey<BusStopOnRoute>(p=>p.PreviousBusStopOnRouteId);
             modelBuilder.Entity<Course>().ToTable("Course");
             modelBuilder.Entity<Failure>().ToTable("Failure");
             modelBuilder.Entity<Line>().ToTable("Line");

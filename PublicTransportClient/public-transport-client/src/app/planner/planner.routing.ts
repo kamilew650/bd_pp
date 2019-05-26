@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AdminComponent } from './admin.component';
-import { UsersComponent } from './users/users.component';
+import { PlannerComponent } from './planner.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 export const routes: Routes = [
   {
     path: '',
-    component: AdminComponent,
+    component: PlannerComponent,
     data: {
       breadcrumb: [null]
     },
     children: [
       {
         path: '',
-        component: UsersComponent
+        component: NavbarComponent
       }
     ],
   }
@@ -25,4 +25,4 @@ export const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class PlannerRoutingModule { }

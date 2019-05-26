@@ -21,6 +21,10 @@ export class LoginService {
     }
   }
 
+  get isLoggedIn() {
+    return this.token ? true : false
+  }
+
   constructor(
     private httpService: CustomHttpService,
     private router: Router,
@@ -46,5 +50,10 @@ export class LoginService {
     return new Promise((resolve, reject) => {
       resolve({ role: "admin" })
     })
+  }
+
+  logout() {
+    this.tokenModel = null
+    this.cookieService.deleteAll()
   }
 }

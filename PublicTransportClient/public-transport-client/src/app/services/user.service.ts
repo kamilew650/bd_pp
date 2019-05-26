@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from 'selenium-webdriver/http';
 import { CustomHttpService } from './custom-http.service';
 import { CookieService } from "ngx-cookie-service"
+import { LoginService } from './login.service';
 
 
 
@@ -13,7 +14,8 @@ export class UserService {
   constructor(
     private httpService: CustomHttpService,
     private router: Router,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private loginService: LoginService
   ) { }
 
 

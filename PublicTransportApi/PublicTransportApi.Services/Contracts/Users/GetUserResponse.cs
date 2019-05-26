@@ -6,7 +6,7 @@ using System.Text;
 
 namespace PublicTransportApi.Services.Contracts.Users
 {
-    class GetUserResponse : BaseContractResponse
+    public class GetUserResponse : BaseContractResponse
     {
         public UserModel User { get; set; }
     }

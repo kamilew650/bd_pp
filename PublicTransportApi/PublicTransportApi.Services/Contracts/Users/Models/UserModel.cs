@@ -33,5 +33,6 @@ namespace PublicTransportApi.Services.Contracts.Users.Models
 
             Rides = user.Rides.Select(r => { return new RideModel(r); }).ToList();
         }
+        public UserModel() { }
     }
 }

@@ -11,11 +11,11 @@ namespace PublicTransportApi.Core.Entities
         [Key]
         public int Id { get; set; }
         [ForeignKey("Course")]
-        public int CourseId { get; set; }
+        public int? CourseId { get; set; }
         [ForeignKey("Vehicle")]
-        public int VehicleId { get; set; }
+        public int? VehicleId { get; set; }
         [ForeignKey("User")]
-        public int DriverId { get; set; }
+        public int? DriverId { get; set; }
         public DateTime Date { get; set; }
         public int TicketsCount { get; set; }
         public double UsedFuel { get; set; }

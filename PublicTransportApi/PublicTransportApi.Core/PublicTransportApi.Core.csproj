@@ -14,6 +14,8 @@
     <Compile Remove="Migrations\20190513115527_initial_repair5.cs" />
     <Compile Remove="Migrations\20190513120430_initial.cs" />
     <Compile Remove="Migrations\20190513120832_initial.cs" />
+    <Compile Remove="Migrations\20190513121122_initial.cs" />
+    <Compile Remove="Migrations\20190602190815_default.cs" />
   </ItemGroup>
 
   <ItemGroup>

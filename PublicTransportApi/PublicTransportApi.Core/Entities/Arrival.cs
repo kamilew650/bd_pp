@@ -11,9 +11,9 @@ namespace PublicTransportApi.Core.Entities
         [Key]
         public int Id { get; set; }
         [ForeignKey("Course")]
-        public int CourseId { get; set; }
+        public int? CourseId { get; set; }
         [ForeignKey("BusStopOnRoute")]
-        public int BusStopOnRouteId { get; set; }
+        public int? BusStopOnRouteId { get; set; }
         public DateTime Time { get; set; }
 
         public Course Course { get; set; }

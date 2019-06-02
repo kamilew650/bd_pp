@@ -12,8 +12,8 @@ namespace PublicTransportApi.Services.Contracts.Routes.Models
     public class RouteModel
     {
         public int Id { get; set; }
-        public int CourseId { get; set; }
-        public int LineId { get; set; }
+        public int? CourseId { get; set; }
+        public int? LineId { get; set; }
         public string Name { get; set; }
 
         public CourseModel Course { get; set; }

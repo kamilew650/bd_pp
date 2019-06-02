@@ -12,7 +12,8 @@ namespace PublicTransportApi.Core.Entities
         public int Id { get; set; }
         [ForeignKey("Vehicle")]
         public int VehicleId { get; set; }
-        public int NotifyingUserId { get; set; }
+        [ForeignKey("User")]
+        public int? NotifyingUserId { get; set; }
         public string Description { get; set; }
         public bool Repaired { get; set; }
         public DateTime NotificationDate { get; set; }

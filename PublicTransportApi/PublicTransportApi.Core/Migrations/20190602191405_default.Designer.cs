@@ -10,8 +10,8 @@ using PublicTransportApi.Core;
 namespace PublicTransportApi.Core.Migrations
 {
     [DbContext(typeof(DefaultDbContext))]
-    [Migration("20190513121122_initial")]
-    partial class initial
+    [Migration("20190602191405_default")]
+    partial class @default
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,9 @@ namespace PublicTransportApi.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BusStopOnRouteId");
+                    b.Property<int?>("BusStopOnRouteId");
 
-                    b.Property<int>("CourseId");
+                    b.Property<int?>("CourseId");
 
                     b.Property<DateTime>("Time");
 
@@ -63,19 +63,21 @@ namespace PublicTransportApi.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("BusStopId");
+                    b.Property<int?>("BusStopId");
+
+                    b.Property<int?>("NextBusStopOnRouteId");
 
                     b.Property<int?>("PreviousBusStopOnRouteId");
 
-                    b.Property<int>("RouteId");
+                    b.Property<int?>("RouteId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BusStopId");
 
-                    b.HasIndex("PreviousBusStopOnRouteId")
+                    b.HasIndex("NextBusStopOnRouteId")
                         .IsUnique()
-                        .HasFilter("[PreviousBusStopOnRouteId] IS NOT NULL");
+                        .HasFilter("[NextBusStopOnRouteId] IS NOT NULL");
 
                     b.HasIndex("RouteId");
 
@@ -109,7 +111,7 @@ namespace PublicTransportApi.Core.Migrations
 
                     b.Property<DateTime>("NotificationDate");
 
-                    b.Property<int>("NotifyingUserId");
+                    b.Property<int?>("NotifyingUserId");
 
                     b.Property<DateTime>("PlannedEndOfRepairDate");
 
@@ -145,19 +147,19 @@ namespace PublicTransportApi.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseId");
+                    b.Property<int?>("CourseId");
 
                     b.Property<DateTime>("Date");
 
                     b.Property<TimeSpan>("Delay");
 
-                    b.Property<int>("DriverId");
+                    b.Property<int?>("DriverId");
 
                     b.Property<int>("TicketsCount");
 
                     b.Property<double>("UsedFuel");
 
-                    b.Property<int>("VehicleId");
+                    b.Property<int?>("VehicleId");
 
                     b.HasKey("Id");
 
@@ -176,9 +178,9 @@ namespace PublicTransportApi.Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CourseId");
+                    b.Property<int?>("CourseId");
 
-                    b.Property<int>("LineId");
+                    b.Property<int?>("LineId");
 
                     b.Property<string>("Name");
 
@@ -203,7 +205,7 @@ namespace PublicTransportApi.Core.Migrations
 
                     b.Property<bool>("Passed");
 
-                    b.Property<int>("VehicleId");
+                    b.Property<int?>("VehicleId");
 
                     b.HasKey("Id");
 
@@ -227,6 +229,8 @@ namespace PublicTransportApi.Core.Migrations
                     b.Property<string>("Password");
 
                     b.Property<int>("Role");
+
+                    b.Property<string>("Token");
 
                     b.HasKey("Id");
 
@@ -262,38 +266,33 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.BusStopOnRoute", "BusStopOnRoute")
                         .WithMany("Arrivals")
-                        .HasForeignKey("BusStopOnRouteId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("BusStopOnRouteId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.Course", "Course")
                         .WithMany("Arrivals")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CourseId");
                 });
 
             modelBuilder.Entity("PublicTransportApi.Core.Entities.BusStopOnRoute", b =>
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.BusStop", "BusStop")
                         .WithMany("BusStopOnRoutes")
-                        .HasForeignKey("BusStopId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("BusStopId");
 
-                    b.HasOne("PublicTransportApi.Core.Entities.BusStopOnRoute", "PreviousBusStopOnRoute")
-                        .WithOne("NextBusStopOnRoute")
-                        .HasForeignKey("PublicTransportApi.Core.Entities.BusStopOnRoute", "PreviousBusStopOnRouteId");
+                    b.HasOne("PublicTransportApi.Core.Entities.BusStopOnRoute", "NextBusStopOnRoute")
+                        .WithOne("PreviousBusStopOnRoute")
+                        .HasForeignKey("PublicTransportApi.Core.Entities.BusStopOnRoute", "NextBusStopOnRouteId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.Route", "Route")
                         .WithMany("BusStopsOnRoute")
-                        .HasForeignKey("RouteId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("RouteId");
                 });
 
             modelBuilder.Entity("PublicTransportApi.Core.Entities.Failure", b =>
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.User", "NotifyingUser")
                         .WithMany("NotifiedFailures")
-                        .HasForeignKey("NotifyingUserId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("NotifyingUserId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.Vehicle", "Vehicle")
                         .WithMany("Failures")
@@ -305,39 +304,33 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.Course", "Course")
                         .WithMany("Rides")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CourseId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.User", "Driver")
                         .WithMany("Rides")
-                        .HasForeignKey("DriverId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("DriverId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.Vehicle", "Vehicle")
                         .WithMany("Rides")
-                        .HasForeignKey("VehicleId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("VehicleId");
                 });
 
             modelBuilder.Entity("PublicTransportApi.Core.Entities.Route", b =>
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.Course", "Course")
                         .WithMany("Routes")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("CourseId");
 
                     b.HasOne("PublicTransportApi.Core.Entities.Line", "Line")
                         .WithMany("Routes")
-                        .HasForeignKey("LineId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("LineId");
                 });
 
             modelBuilder.Entity("PublicTransportApi.Core.Entities.TechnicalReview", b =>
                 {
                     b.HasOne("PublicTransportApi.Core.Entities.Vehicle", "Vehicle")
                         .WithMany("TechnicalReviews")
-                        .HasForeignKey("VehicleId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("VehicleId");
                 });
 #pragma warning restore 612, 618
         }

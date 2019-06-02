@@ -13,9 +13,9 @@ using System.Text;
 
 namespace PublicTransportApi.Services
 {
-    class FailureService : BaseService, IFailureService
+    public class FailureService : BaseService, IFailureService
     {
-        public FailureService(DefaultDbContext dbContext, ILogger logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
+        public FailureService(DefaultDbContext dbContext, ILogger<FailureService> logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
         {
         }
 

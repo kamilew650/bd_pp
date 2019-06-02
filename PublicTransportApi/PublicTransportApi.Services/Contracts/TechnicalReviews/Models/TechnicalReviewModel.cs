@@ -21,6 +21,10 @@ namespace PublicTransportApi.Services.Contracts.TechnicalReviews.Models
 
         public TechnicalReviewModel(TechnicalReview technicalReview)
         {
+            if (technicalReview == null)
+            {
+                return;
+            }
             Id = technicalReview.Id;
             VehicleId = technicalReview.VehicleId;
             Date = technicalReview.Date;

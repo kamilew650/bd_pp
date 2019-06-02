@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
+    //[ApiController]
+    //[Route("[controller]")]
     public class TechnicalReviewController : BaseController
     {
         private ITechnicalReviewService _technicalReviewService;

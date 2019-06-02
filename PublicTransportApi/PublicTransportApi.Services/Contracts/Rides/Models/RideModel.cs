@@ -25,6 +25,10 @@ namespace PublicTransportApi.Services.Contracts.Rides.Models
 
         public RideModel(Ride ride)
         {
+            if (ride == null)
+            {
+                return;
+            }
             Id = ride.Id;
             CourseId = ride.CourseId;
             VehicleId = ride.VehicleId;

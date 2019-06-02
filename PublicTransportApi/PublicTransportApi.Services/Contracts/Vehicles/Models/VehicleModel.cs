@@ -29,6 +29,10 @@ namespace PublicTransportApi.Services.Contracts.Vehicles.Models
         }
         public VehicleModel(Vehicle vehicle)
         {
+            if (vehicle == null)
+            {
+                return;
+            }
             Id = vehicle.Id;
             Brand = vehicle.Brand;
             Model = vehicle.Model;
@@ -37,9 +41,12 @@ namespace PublicTransportApi.Services.Contracts.Vehicles.Models
             PurchaseDate = vehicle.PurchaseDate;
             Available = vehicle.Available;
             Seats = vehicle.Seats;
-            Failures = vehicle.Failures.Select(f => { return new FailureModel(f); }).ToList();
-            TechnicalReviews = vehicle.TechnicalReviews.Select(tr => { return new TechnicalReviewModel(tr); }).ToList();
-            Rides = vehicle.Rides.Select(r => { return new RideModel(r); }).ToList();
+            if (vehicle.Failures != null && vehicle.Failures.Any())
+                Failures = vehicle.Failures.Select(f => { return new FailureModel(f); }).ToList();
+            if (vehicle.TechnicalReviews != null && vehicle.Failures.Any())
+                TechnicalReviews = vehicle.TechnicalReviews.Select(tr => { return new TechnicalReviewModel(tr); }).ToList();
+            if (vehicle.Rides != null && vehicle.Failures.Any())
+                Rides = vehicle.Rides.Select(r => { return new RideModel(r); }).ToList();
         }
     }
 }

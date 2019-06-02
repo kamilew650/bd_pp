@@ -28,19 +28,19 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _vehicleService.GetVehicle(vehicleId), r => r.Vehicle);
         }
 
-        [HttpPut]
+        [HttpPut, Route("create")]
         public IActionResult CreateVehicle([FromBody]VehicleVM vehicleViewModel)
         {
             return GetResult(() => _vehicleService.CreateVehicle(vehicleViewModel.MapToVehicleModel()), r => r);
         }
 
-        [HttpPut]
+        [HttpPut, Route("update")]
         public IActionResult UpdateVehicle([FromBody]VehicleVM vehicleViewModel)
         {
             return GetResult(() => _vehicleService.UpdateVehicle(vehicleViewModel.MapToVehicleModel()), r => r);
         }
 
-        [HttpGet, Route("{vehicleId}")]
+        [HttpGet, Route("{vehicleId}/delete")]
         public IActionResult DeleteVehicle(int vehicleId)
         {
             return GetResult(() => _vehicleService.DeleteVehicle(vehicleId), r => r);

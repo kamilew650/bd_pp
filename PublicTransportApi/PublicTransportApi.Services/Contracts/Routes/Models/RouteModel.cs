@@ -25,13 +25,20 @@ namespace PublicTransportApi.Services.Contracts.Routes.Models
 
         public RouteModel(Route route)
         {
+            if (route == null)
+            {
+                return;
+            }
             Id = route.Id;
             CourseId = route.CourseId;
             LineId = route.LineId;
             Name = route.Name;
             Course = new CourseModel(route.Course);
             Line = new LineModel(route.Line);
-            BusStopsOnRoute = route.BusStopsOnRoute.Select(bs => { return new BusStopOnRouteModel(bs); }).ToList();
+            if (route.BusStopsOnRoute != null && route.BusStopsOnRoute.Any())
+            {
+                BusStopsOnRoute = route.BusStopsOnRoute.Select(bs => { return new BusStopOnRouteModel(bs); }).ToList();
+            }
         }
     }
 }

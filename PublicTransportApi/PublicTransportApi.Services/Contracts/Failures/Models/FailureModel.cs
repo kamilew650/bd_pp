@@ -27,6 +27,10 @@ namespace PublicTransportApi.Services.Contracts.Failures.Models
         }
         public FailureModel(Failure failure)
         {
+            if (failure == null)
+            {
+                return;
+            }
             Id = failure.Id;
             VehicleId = failure.VehicleId;
             NotifyingUserId = failure.NotifyingUserId;

@@ -13,9 +13,9 @@ using PublicTransportApi.Services.Interface;
 
 namespace PublicTransportApi.Services
 {
-    class TechnicalReviewService : BaseService, ITechnicalReviewService
+    public class TechnicalReviewService : BaseService, ITechnicalReviewService
     {
-        public TechnicalReviewService(DefaultDbContext dbContext, ILogger logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
+        public TechnicalReviewService(DefaultDbContext dbContext, ILogger<TechnicalReviewService> logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
         {
         }
 

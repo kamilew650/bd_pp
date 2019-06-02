@@ -21,13 +21,22 @@ namespace PublicTransportApi.Services.Contracts.BusStops.Models
 
         public BusStopModel(BusStop busStop)
         {
+            if (busStop == null)
+            {
+
+            }
             Id = busStop.Id;
             Name = busStop.Name;
             Address = busStop.Address;
-            BusStopOnRoutes = busStop.BusStopOnRoutes.Select(bs =>
+            if (busStop.BusStopOnRoutes != null && busStop.BusStopOnRoutes.Any())
             {
-                return new BusStopOnRouteModel(bs);
-            }).ToList();
+                BusStopOnRoutes = busStop.BusStopOnRoutes.Select(bs =>
+                {
+                    return new BusStopOnRouteModel(bs);
+                }).ToList();
+
+            }
+
         }
 
     }

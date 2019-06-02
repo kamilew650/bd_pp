@@ -16,9 +16,16 @@ namespace PublicTransportApi.Services.Contracts.Lines.Models
 
         public LineModel(Line line)
         {
+            if (line == null)
+            {
+                return;
+            }
             Id = line.Id;
             Number = line.Number;
-            Routes = line.Routes.Select(r => { return new RouteModel(r); }).ToList();
+            if (line.Routes != null && line.Routes.Any())
+            {
+                Routes = line.Routes.Select(r => { return new RouteModel(r); }).ToList();
+            }
         }
 
     }

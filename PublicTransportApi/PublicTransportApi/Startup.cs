@@ -59,6 +59,7 @@ namespace PublicTransportApi
                 };
             });
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IVehicleService, VehicleService>();
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

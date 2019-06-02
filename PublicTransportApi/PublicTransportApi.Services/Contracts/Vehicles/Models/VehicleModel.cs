@@ -24,6 +24,9 @@ namespace PublicTransportApi.Services.Contracts.Vehicles.Models
         public ICollection<TechnicalReviewModel> TechnicalReviews { get; set; }
         public ICollection<RideModel> Rides { get; set; }
 
+        public VehicleModel()
+        {
+        }
         public VehicleModel(Vehicle vehicle)
         {
             Id = vehicle.Id;

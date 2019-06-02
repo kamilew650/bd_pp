@@ -8,20 +8,19 @@ namespace PublicTransportApi.Core.Entities
 {
     public class BusStopOnRoute
     {
-        [Key]
-        public int Id { get; set; }
-        [ForeignKey("Route")]
-        public int RouteId { get; set; }
-        [ForeignKey("BusStop")]
-        public int BusStopId { get; set; }
-        public int? PreviousBusStopOnRouteId { get; set; }
+            [Key]
+            public int Id { get; set; }
+            [ForeignKey("Route")]
+            public int RouteId { get; set; }
+            [ForeignKey("BusStop")]
+            public int BusStopId { get; set; }
+            public int? PreviousBusStopOnRouteId { get; set; }
 
-        public Route Route { get; set; }
-        public BusStop BusStop { get; set; }
-        [ForeignKey("PreviousBusStopOnRouteId")]
-        public BusStopOnRoute PreviousBusStopOnRoute { get; set; }
-        public BusStopOnRoute NextBusStopOnRoute { get; set; }
+            public Route Route { get; set; }
+            public BusStop BusStop { get; set; }
+            public BusStopOnRoute PreviousBusStopOnRoute { get; set; }
+            public BusStopOnRoute NextBusStopOnRoute { get; set; }
 
-        public ICollection<Arrival> Arrivals { get; set; }
+            public ICollection<Arrival> Arrivals { get; set; }
     }
 }

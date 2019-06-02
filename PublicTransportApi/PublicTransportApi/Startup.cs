@@ -18,6 +18,7 @@ using PublicTransportApi.Core;
 using PublicTransportApi.Common.Configurations;
 using PublicTransportApi.Services.Interface;
 using PublicTransportApi.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace PublicTransportApi
 {
@@ -60,6 +61,10 @@ namespace PublicTransportApi
             });
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IFailureService, FailureService>();
+            services.AddScoped<ITechnicalReviewService, TechnicalReviewService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddDbContext<DefaultDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

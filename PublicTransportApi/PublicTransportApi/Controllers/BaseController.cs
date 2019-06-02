@@ -10,10 +10,11 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
-    [Authorize(AuthenticationSchemes = "Bearer")]
+    //[Authorize(AuthenticationSchemes = "Bearer")]
+    [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
-    [EnableCors("MyPolicy")]
+    //[EnableCors("MyPolicy")]
     public class BaseController : Controller
     {
         protected IActionResult GetResult<T>(Func<T> action, Func<T, object> result) where T : BaseContractResponse

@@ -19,6 +19,10 @@ namespace PublicTransportApi.Services.Contracts.Arrivals.Models
 
         public ArrivalModel(Arrival arrival)
         {
+            if (arrival == null)
+            {
+                return;
+            }
             Id = arrival.Id;
             CourseId = arrival.CourseId;
             BusStopOnRouteId = arrival.BusStopOnRouteId;

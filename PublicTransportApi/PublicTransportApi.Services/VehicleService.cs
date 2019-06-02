@@ -15,7 +15,7 @@ namespace PublicTransportApi.Services
 {
     public class VehicleService : BaseService, IVehicleService
     {
-        public VehicleService(DefaultDbContext dbContext, ILogger logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
+        public VehicleService(DefaultDbContext dbContext, ILogger<VehicleService> logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
         {
         }
 

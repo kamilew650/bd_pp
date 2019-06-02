@@ -10,7 +10,7 @@ namespace PublicTransportApi.Services.Contracts.Failures.Models
     public class FailureModel
     {
         public int Id { get; set; }
-        public int VehicleId { get; set; }
+        public int? VehicleId { get; set; }
         public int? NotifyingUserId { get; set; }
         public string Description { get; set; }
         public bool Repaired { get; set; }
@@ -27,6 +27,10 @@ namespace PublicTransportApi.Services.Contracts.Failures.Models
         }
         public FailureModel(Failure failure)
         {
+            if (failure == null)
+            {
+                return;
+            }
             Id = failure.Id;
             VehicleId = failure.VehicleId;
             NotifyingUserId = failure.NotifyingUserId;

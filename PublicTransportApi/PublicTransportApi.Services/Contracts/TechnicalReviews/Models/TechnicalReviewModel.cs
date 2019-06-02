@@ -15,9 +15,16 @@ namespace PublicTransportApi.Services.Contracts.TechnicalReviews.Models
         public bool Passed { get; set; }
 
         public VehicleModel Vehicle { get; set; }
+        public TechnicalReviewModel()
+        {
+        }
 
         public TechnicalReviewModel(TechnicalReview technicalReview)
         {
+            if (technicalReview == null)
+            {
+                return;
+            }
             Id = technicalReview.Id;
             VehicleId = technicalReview.VehicleId;
             Date = technicalReview.Date;

@@ -23,6 +23,10 @@ namespace PublicTransportApi.Services.Contracts.Users.Models
 
         public UserModel(User user)
         {
+            if (user == null)
+            {
+                return;
+            }
             Id = user.Id;
             FirstName = user.FirstName;
             LastName = user.LastName;
@@ -31,7 +35,10 @@ namespace PublicTransportApi.Services.Contracts.Users.Models
             Role = user.Role;
             Token = user.Token;
 
-            Rides = user.Rides.Select(r => { return new RideModel(r); }).ToList();
+            if (user.Rides != null && user.Rides.Any())
+            {
+                Rides = user.Rides.Select(r => { return new RideModel(r); }).ToList();
+            }
         }
         public UserModel() { }
     }

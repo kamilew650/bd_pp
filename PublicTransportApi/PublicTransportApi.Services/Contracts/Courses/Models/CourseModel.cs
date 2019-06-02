@@ -20,11 +20,24 @@ namespace PublicTransportApi.Services.Contracts.Courses.Models
 
         public CourseModel(Course course)
         {
+            if (course== null)
+            {
+                return;
+            }
             Id = course.Id;
             CourseType = course.CourseType;
-            Routes = course.Routes.Select(r => { return new RouteModel(r); }).ToList();
-            Arrivals = course.Arrivals.Select(a => { return new ArrivalModel(a); }).ToList();
-            Rides = course.Rides.Select(r => { return new RideModel(r); }).ToList();
+            if (course.Routes != null && course.Routes.Any())
+            {
+                Routes = course.Routes.Select(r => { return new RouteModel(r); }).ToList();
+            }
+            if (course.Arrivals != null && course.Arrivals.Any())
+            {
+                Arrivals = course.Arrivals.Select(a => { return new ArrivalModel(a); }).ToList();
+            }
+            if (course.Rides != null && course.Rides.Any())
+            {
+                Rides = course.Rides.Select(r => { return new RideModel(r); }).ToList();
+            }
         }
     }
 }

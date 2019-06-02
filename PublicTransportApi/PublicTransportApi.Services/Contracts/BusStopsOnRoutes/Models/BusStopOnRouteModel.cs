@@ -26,18 +26,26 @@ namespace PublicTransportApi.Services.Contracts.BusStopsOnRoutes.Models
 
         public BusStopOnRouteModel(BusStopOnRoute busStopOnRoute)
         {
-            Id = busStopOnRoute.Id;
-            RouteId = busStopOnRoute.RouteId;
-            BusStopId = busStopOnRoute.BusStopId;
-            PreviousBusStopOnRouteId = busStopOnRoute.PreviousBusStopOnRouteId;
-            Route = new RouteModel(busStopOnRoute.Route);
-            BusStop = new BusStopModel(busStopOnRoute.BusStop);
-            PreviousBusStopOnRoute = new BusStopOnRouteModel(busStopOnRoute.PreviousBusStopOnRoute);
-            NextBusStopOnRoute = new BusStopOnRouteModel(busStopOnRoute.NextBusStopOnRoute);
-            Arrivals = busStopOnRoute.Arrivals.Select(a =>
+            if (busStopOnRoute == null)
             {
-                return new ArrivalModel(a);
-            }).ToList();
+                Id = busStopOnRoute.Id;
+                RouteId = busStopOnRoute.RouteId;
+                BusStopId = busStopOnRoute.BusStopId;
+                PreviousBusStopOnRouteId = busStopOnRoute.PreviousBusStopOnRouteId;
+                Route = new RouteModel(busStopOnRoute.Route);
+                BusStop = new BusStopModel(busStopOnRoute.BusStop);
+                PreviousBusStopOnRoute = new BusStopOnRouteModel(busStopOnRoute.PreviousBusStopOnRoute);
+                NextBusStopOnRoute = new BusStopOnRouteModel(busStopOnRoute.NextBusStopOnRoute);
+                if (busStopOnRoute.Arrivals != null && busStopOnRoute.Arrivals.Any())
+                {
+                    Arrivals = busStopOnRoute.Arrivals.Select(a =>
+                    {
+                        return new ArrivalModel(a);
+                    }).ToList();
+
+                }
+
+            }
 
         }
     }

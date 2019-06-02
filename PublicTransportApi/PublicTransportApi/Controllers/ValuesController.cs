@@ -6,9 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PublicTransportApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
+    //[Route("api/[controller]")]
+    //[ApiController]
+    public class ValuesController : BaseController
     {
         // GET api/values
         [HttpGet]

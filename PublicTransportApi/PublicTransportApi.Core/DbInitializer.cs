@@ -14,8 +14,17 @@ namespace PublicTransportApi.Core
 
             if (!context.Users.Any())
             {
-                User user = new User() { FirstName = "Jan", LastName = "Nowak", Login = "jn123", Password = "haslo123", Role = 1 };
-                context.Users.Add(user);
+                User driver = new User() { FirstName = "Jan", LastName = "Kierowca", Login = "login0", Password = "haslo0", Role = 0 };
+                context.Users.Add(driver);
+                User setter = new User() { FirstName = "Jan", LastName = "Dystrybutor", Login = "login1", Password = "haslo1", Role = 1 };
+                context.Users.Add(setter);
+                User manager = new User() { FirstName = "Jan", LastName = "Menadżer", Login = "login2", Password = "haslo2", Role = 2 };
+                context.Users.Add(manager);
+                User planner = new User() { FirstName = "Jan", LastName = "Planista", Login = "login3", Password = "haslo3", Role = 3 };
+                context.Users.Add(planner);
+                User admin = new User() { FirstName = "Jan", LastName = "Administrator", Login = "login4", Password = "haslo4", Role = 4 };
+                context.Users.Add(admin);
+
                 context.SaveChanges();
 
             }

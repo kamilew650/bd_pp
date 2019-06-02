@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ManagerComponent } from './manager.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { SurveyComponent } from './survey/survey.component';
 
 
 export const routes: Routes = [
@@ -14,7 +15,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: NavbarComponent
+        component: SurveyComponent
       }
     ],
   }

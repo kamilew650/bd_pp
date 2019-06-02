@@ -19,10 +19,15 @@ export class VehicleComponent implements OnInit {
   step: number
 
   ngOnInit() {
+    this.vehicleService.get().then(vehicles => {
+      console.log(vehicles)
+      this.vehicles = vehicles as Vehicle[]
+    })
   }
 
   initial() {
     this.vehicleService.get().then(vehicles => {
+      console.log(vehicles)
       this.vehicles = vehicles as Vehicle[]
     })
   }

@@ -46,17 +46,23 @@ export class VehicleService {
       resolve([
         {
           id: 1,
-          firstName: "Imie1",
-          lastName: "Nazwisko1",
-          login: "login1",
-          role: RoleEnum.ADMIN,
+          brand: "Marka1",
+          model: "Model1",
+          yearOfProduction: 2001,
+          mileage: 1000,
+          purchaseDate: new Date(),
+          available: true,
+          seats: 12,
         },
         {
           id: 2,
-          firstName: "Imie2",
-          lastName: "Nazwisko2",
-          login: "login2",
-          role: RoleEnum.DRIVER,
+          brand: "Marka2",
+          model: "Model2",
+          yearOfProduction: 2001,
+          mileage: 1023,
+          purchaseDate: new Date(),
+          available: false,
+          seats: 12,
         }
       ])
     })

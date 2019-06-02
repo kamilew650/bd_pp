@@ -141,7 +141,11 @@
       </div>
     </form>
   </div>
-  <div class="modal-footer">
+  <div class="modal-footer" *ngIf="step === 1">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Anuluj</button>
+    <button type="button" class="btn btn-primary" (click)="addUser()">Dodaj</button>
+  </div>
+  <div class="modal-footer" *ngIf="step === 2">
     <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Anuluj</button>
     <button type="button" class="btn btn-primary" (click)="editUser()">Edytuj</button>
   </div>

@@ -6,13 +6,13 @@ import { CookieService } from "ngx-cookie-service"
 import { LoginService } from './login.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { RoleEnum } from '../models/RoleEnum';
-import User from '../models/User';
 import { url } from '../congif';
+import Vehicle from '../models/Vehicle';
 
 
 
 @Injectable()
-export class UserService {
+export class TechnicalReviewService {
 
   constructor(
     private httpService: CustomHttpService,
@@ -31,9 +31,9 @@ export class UserService {
     return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
   }
 
-  getUsers() {
+  getVehicles() {
     // return this.httpService
-    //   .post(`${url}/token`, { login: login, password: password })
+    //   .post(`${url}/technicalReviews`)
     //   .toPromise()
     //   .then((response: Response) => {
     //     const tokenModel = response.json()
@@ -62,52 +62,52 @@ export class UserService {
     })
   }
 
-  getUser(id: number) {
+  getOne(id: number) {
     return this.http
-      .get(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .get(`${url}/technicalReviews/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const review = response.json()
+        return review
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  addUser(user: User) {
+  add(review: Vehicle) {
     return this.http
-      .post(`${url}/users`, user, { headers: this.getAuthHeader() })
+      .post(`${url}/technicalReviews`, review, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const review = response.json()
+        return review
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  updateUser(id: number, user: User) {
+  update(id: number, review: Vehicle) {
     return this.http
-      .put(`${url}/token/${id}`, user, { headers: this.getAuthHeader() })
+      .put(`${url}/technicalReviews/${id}`, review, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const review = response.json()
+        return review
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  deleteUser(id: number) {
+  delete(id: number) {
     return this.http
-      .delete(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .delete(`${url}/technicalReviews/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const review = response.json()
+        return review
       })
       .catch(error => {
         console.error(error)

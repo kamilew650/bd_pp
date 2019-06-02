@@ -6,13 +6,13 @@ import { CookieService } from "ngx-cookie-service"
 import { LoginService } from './login.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { RoleEnum } from '../models/RoleEnum';
-import User from '../models/User';
 import { url } from '../congif';
+import Failure from '../models/Failure';
 
 
 
 @Injectable()
-export class UserService {
+export class FailureService {
 
   constructor(
     private httpService: CustomHttpService,
@@ -31,9 +31,9 @@ export class UserService {
     return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
   }
 
-  getUsers() {
+  getVehicles() {
     // return this.httpService
-    //   .post(`${url}/token`, { login: login, password: password })
+    //   .post(`${url}/failures`)
     //   .toPromise()
     //   .then((response: Response) => {
     //     const tokenModel = response.json()
@@ -62,52 +62,52 @@ export class UserService {
     })
   }
 
-  getUser(id: number) {
+  getOne(id: number) {
     return this.http
-      .get(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .get(`${url}/failures/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const failure = response.json()
+        return failure
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  addUser(user: User) {
+  add(failure: Failure) {
     return this.http
-      .post(`${url}/users`, user, { headers: this.getAuthHeader() })
+      .post(`${url}/failures`, failure, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const failure = response.json()
+        return failure
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  updateUser(id: number, user: User) {
+  update(id: number, failure: Failure) {
     return this.http
-      .put(`${url}/token/${id}`, user, { headers: this.getAuthHeader() })
+      .put(`${url}/failures/${id}`, failure, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const failure = response.json()
+        return failure
       })
       .catch(error => {
         console.error(error)
       })
   }
 
-  deleteUser(id: number) {
+  delete(id: number) {
     return this.http
-      .delete(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .delete(`${url}/failure/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
-        return user
+        const failure = response.json()
+        return failure
       })
       .catch(error => {
         console.error(error)

@@ -17,6 +17,9 @@ import { PlannerModule } from './planner/planner.module';
 import { SetterModule } from './setter/setter.module';
 import { UserService } from './services/user.service';
 import { CommonModule } from '@angular/common';
+import { VehicleService } from './services/vehicle.service';
+import { FailureService } from './services/failure.service';
+import { TechnicalReviewService } from './services/technicalReview.service';
 
 
 @NgModule({
@@ -39,7 +42,7 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
     CommonModule
   ],
-  providers: [LoginService, CustomHttpService, CookieService, UserService],
+  providers: [LoginService, CustomHttpService, CookieService, UserService, VehicleService, TechnicalReviewService, FailureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

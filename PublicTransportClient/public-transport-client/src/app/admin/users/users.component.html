@@ -37,7 +37,8 @@
                   <td>
                     <button class="btn btn-warning" (click)="openEditModal(user.id, content)"><i
                         class="fas fa-edit"></i></button>
-                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    <button class="btn btn-danger" (click)="deleteUser(user.id)"><i
+                        class="fas fa-trash-alt"></i></button>
                   </td>
                 </tr>
               </tbody>

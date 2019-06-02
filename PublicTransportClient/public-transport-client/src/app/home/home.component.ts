@@ -4,6 +4,7 @@ import { LoginService } from '../services/login.service';
 import UserModel from '../models/UserModel';
 import { Router, ActivatedRoute } from '@angular/router';
 import { isError } from 'util';
+import { RoleEnum } from '../models/RoleEnum';
 
 @Component({
   selector: 'app-home',
@@ -33,22 +34,28 @@ export class HomeComponent implements OnInit {
 
 
   tryLogin() {
-    console.log(this.password, this.login)
     this.loginService.login(this.login, this.password).then(res => {
       const user = res as UserModel
-      console.log("co")
       switch (user.role) {
-        case 'admin':
+        case 'admin' || RoleEnum.ADMIN:
           this.router.navigateByUrl('/admin');
           break
-        case 'driver':
+        case 'driver' || RoleEnum.DRIVER:
           this.router.navigateByUrl('/driver');
+          break
+        case 'manager' || RoleEnum.MANAGER:
+          this.router.navigateByUrl('/manager');
+          break
+        case 'planner' || RoleEnum.PLANNER:
+          this.router.navigateByUrl('/manager');
+          break
+        case 'setter' || RoleEnum.SETTER:
+          this.router.navigateByUrl('/setter');
           break
         default:
           this.isError = true
 
       }
-
     })
       .catch(err => {
         console.error(err)

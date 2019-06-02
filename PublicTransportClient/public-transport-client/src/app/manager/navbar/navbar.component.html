@@ -4,17 +4,20 @@
   </a>
   <h2 class="title-div">Panel administracyjny</h2>
   <div class="user d-inline">
-    <button type="button" id="userMenuButton" class="btn" dropdownToggle>
+    <button type="button" id="userMenuButton" class="btn" routerLink="/manager" routerLinkActive="active"
+      dropdownToggle>
       <span class="name hidden-sm hidden-xs"> Przeglądy </span>
     </button>
   </div>
   <div class="user d-inline">
-    <button type="button" id="userMenuButton" class="btn" dropdownToggle>
+    <button type="button" id="userMenuButton" class="btn" routerLink="/manager/failure" routerLinkActive="active"
+      dropdownToggle>
       <span class="name hidden-sm hidden-xs"> Awarie </span>
     </button>
   </div>
   <div class="user d-inline">
-    <button type="button" id="userMenuButton" class="btn" dropdownToggle>
+    <button type="button" id="userMenuButton" class="btn" routerLink="/manager/vehicle" routerLinkActive="active"
+      dropdownToggle>
       <span class="name hidden-sm hidden-xs"> Pojazdy </span>
     </button>
   </div>

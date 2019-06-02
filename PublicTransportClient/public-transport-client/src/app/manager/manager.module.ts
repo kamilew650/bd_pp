@@ -6,14 +6,17 @@ import { ManagerRoutingModule } from './manager.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SurveyComponent } from './survey/survey.component';
 import { FailureComponent } from './failure/failure.component';
-import { VahicleComponent } from './vahicle/vahicle.component';
+import { VehicleComponent } from './vahicle/vahicle.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ManagerComponent, NavbarComponent, SurveyComponent, FailureComponent, VahicleComponent],
+  declarations: [ManagerComponent, NavbarComponent, SurveyComponent, FailureComponent, VehicleComponent],
   imports: [
     CommonModule,
     ManagerRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ManagerModule { }

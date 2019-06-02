@@ -20,6 +20,7 @@ export class UsersComponent implements OnInit {
 
   users: User[]
   selectedUser: User
+  userToEdit: User
   newUser: User = new User;
   passwordAgain: string
   step: number
@@ -37,11 +38,7 @@ export class UsersComponent implements OnInit {
   open(content) {
     this.newUser = new User
     this.passwordAgain = ''
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' })
   }
 
   openAddModal(content) {
@@ -51,22 +48,29 @@ export class UsersComponent implements OnInit {
 
   openEditModal(id: number, content) {
     this.step = 2
-    this.selectedUser = this.users.find(u => u.id == id)
+    this.userToEdit = this.users.find(u => u.id == id)
+    this.selectedUser = { ...this.userToEdit }
     this.open(content)
   }
 
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+  deleteUser(id: number) {
+    this.userService.deleteUser(id).then(res => {
+      this.users = this.users.filter(u => u.id !== id)
+    })
   }
 
   addUser() {
-    console.log(this.newUser)
+    this.userService.addUser(this.newUser).then(res => {
+      this.initial()
+      this.modalService.dismissAll()
+    })
+  }
+
+  editUser() {
+    this.userService.updateUser(this.selectedUser.id, this.selectedUser).then(res => {
+      this.initial()
+      this.modalService.dismissAll()
+    })
   }
 
 }

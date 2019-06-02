@@ -5,13 +5,16 @@ import { AdminRoutingModule } from './admin.routing';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UsersComponent } from './users/users.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdminComponent, NavbarComponent, UsersComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminModule { }

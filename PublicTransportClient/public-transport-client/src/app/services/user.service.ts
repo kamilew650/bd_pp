@@ -5,6 +5,8 @@ import { CustomHttpService } from './custom-http.service';
 import { CookieService } from "ngx-cookie-service"
 import { LoginService } from './login.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { RoleEnum } from '../models/RoleEnum';
+import User from '../models/User';
 
 
 
@@ -40,13 +42,28 @@ export class UserService {
     //     console.error(error)
     //   })
     return new Promise((resolve, reject) => {
-      resolve({ role: "admin" })
+      resolve([
+        {
+          id: 1,
+          firstName: "Imie1",
+          lastName: "Nazwisko1",
+          login: "login1",
+          role: RoleEnum.ADMIN,
+        },
+        {
+          id: 2,
+          firstName: "Imie2",
+          lastName: "Nazwisko2",
+          login: "login2",
+          role: RoleEnum.DRIVER,
+        }
+      ])
     })
   }
 
-  getUser(id: string) {
+  getUser(id: number) {
     return this.http
-      .post('/token', { id: id }, { headers: this.getAuthHeader() })
+      .get(`/token/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
         const user = response.json()
@@ -57,42 +74,42 @@ export class UserService {
       })
   }
 
-  addUser(id: string) {
-    // return this.httpService
-    //   .post('/token', {id: id},)
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
+  addUser(user: User) {
+    return this.http
+      .post('/token', user, { headers: this.getAuthHeader() })
+      .toPromise()
+      .then((response: Response) => {
+        const user = response.json()
+        return user
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 
-  updateUser(id: string) {
-    // return this.httpService
-    //   .post('/token', { login: login, password: password })
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
+  updateUser(id: number, user: User) {
+    return this.http
+      .put(`/token/${id}`, user, { headers: this.getAuthHeader() })
+      .toPromise()
+      .then((response: Response) => {
+        const user = response.json()
+        return user
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 
-  deleteUser(id: string) {
-    // return this.httpService
-    //   .post('/token', { login: login, password: password })
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
+  deleteUser(id: number) {
+    return this.http
+      .delete(`/token/${id}`, { headers: this.getAuthHeader() })
+      .toPromise()
+      .then((response: Response) => {
+        const user = response.json()
+        return user
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 }

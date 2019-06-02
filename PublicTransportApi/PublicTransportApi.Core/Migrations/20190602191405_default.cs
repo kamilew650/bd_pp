@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PublicTransportApi.Core.Migrations
 {
-    public partial class initial : Migration
+    public partial class @default : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,7 +58,8 @@ namespace PublicTransportApi.Core.Migrations
                     LastName = table.Column<string>(nullable: true),
                     Login = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
-                    Role = table.Column<int>(nullable: false)
+                    Role = table.Column<int>(nullable: false),
+                    Token = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -90,8 +91,8 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CourseId = table.Column<int>(nullable: false),
-                    LineId = table.Column<int>(nullable: false),
+                    CourseId = table.Column<int>(nullable: true),
+                    LineId = table.Column<int>(nullable: true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -102,13 +103,13 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.CourseId,
                         principalTable: "Course",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Route_Line_LineId",
                         column: x => x.LineId,
                         principalTable: "Line",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -118,7 +119,7 @@ namespace PublicTransportApi.Core.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     VehicleId = table.Column<int>(nullable: false),
-                    NotifyingUserId = table.Column<int>(nullable: false),
+                    NotifyingUserId = table.Column<int>(nullable: true),
                     Description = table.Column<string>(nullable: true),
                     Repaired = table.Column<bool>(nullable: false),
                     NotificationDate = table.Column<DateTime>(nullable: false),
@@ -134,7 +135,7 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.NotifyingUserId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Failure_Vehicle_VehicleId",
                         column: x => x.VehicleId,
@@ -149,9 +150,9 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CourseId = table.Column<int>(nullable: false),
-                    VehicleId = table.Column<int>(nullable: false),
-                    DriverId = table.Column<int>(nullable: false),
+                    CourseId = table.Column<int>(nullable: true),
+                    VehicleId = table.Column<int>(nullable: true),
+                    DriverId = table.Column<int>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
                     TicketsCount = table.Column<int>(nullable: false),
                     UsedFuel = table.Column<double>(nullable: false),
@@ -165,19 +166,19 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.CourseId,
                         principalTable: "Course",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ride_User_DriverId",
                         column: x => x.DriverId,
                         principalTable: "User",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ride_Vehicle_VehicleId",
                         column: x => x.VehicleId,
                         principalTable: "Vehicle",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,7 +187,7 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    VehicleId = table.Column<int>(nullable: false),
+                    VehicleId = table.Column<int>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false),
                     DueDate = table.Column<DateTime>(nullable: false),
                     Passed = table.Column<bool>(nullable: false)
@@ -199,7 +200,7 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.VehicleId,
                         principalTable: "Vehicle",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,9 +209,10 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    RouteId = table.Column<int>(nullable: false),
-                    BusStopId = table.Column<int>(nullable: false),
-                    PreviousBusStopOnRouteId = table.Column<int>(nullable: true)
+                    RouteId = table.Column<int>(nullable: true),
+                    BusStopId = table.Column<int>(nullable: true),
+                    PreviousBusStopOnRouteId = table.Column<int>(nullable: true),
+                    NextBusStopOnRouteId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -220,10 +222,10 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.BusStopId,
                         principalTable: "BusStop",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_BusStopOnRoute_BusStopOnRoute_PreviousBusStopOnRouteId",
-                        column: x => x.PreviousBusStopOnRouteId,
+                        name: "FK_BusStopOnRoute_BusStopOnRoute_NextBusStopOnRouteId",
+                        column: x => x.NextBusStopOnRouteId,
                         principalTable: "BusStopOnRoute",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -232,7 +234,7 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.RouteId,
                         principalTable: "Route",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -241,8 +243,8 @@ namespace PublicTransportApi.Core.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CourseId = table.Column<int>(nullable: false),
-                    BusStopOnRouteId = table.Column<int>(nullable: false),
+                    CourseId = table.Column<int>(nullable: true),
+                    BusStopOnRouteId = table.Column<int>(nullable: true),
                     Time = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
@@ -253,13 +255,13 @@ namespace PublicTransportApi.Core.Migrations
                         column: x => x.BusStopOnRouteId,
                         principalTable: "BusStopOnRoute",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Arrival_Course_CourseId",
                         column: x => x.CourseId,
                         principalTable: "Course",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -278,11 +280,11 @@ namespace PublicTransportApi.Core.Migrations
                 column: "BusStopId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BusStopOnRoute_PreviousBusStopOnRouteId",
+                name: "IX_BusStopOnRoute_NextBusStopOnRouteId",
                 table: "BusStopOnRoute",
-                column: "PreviousBusStopOnRouteId",
+                column: "NextBusStopOnRouteId",
                 unique: true,
-                filter: "[PreviousBusStopOnRouteId] IS NOT NULL");
+                filter: "[NextBusStopOnRouteId] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BusStopOnRoute_RouteId",

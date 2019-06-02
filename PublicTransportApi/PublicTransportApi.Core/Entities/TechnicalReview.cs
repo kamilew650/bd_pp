@@ -11,7 +11,7 @@ namespace PublicTransportApi.Core.Entities
         [Key]
         public int Id { get; set; }
         [ForeignKey("Vehicle")]
-        public int VehicleId { get; set; }
+        public int? VehicleId { get; set; }
         public DateTime Date { get; set; }
         public DateTime DueDate { get; set; }
         public bool Passed { get; set; }

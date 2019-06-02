@@ -9,7 +9,7 @@ namespace PublicTransportApi.Services.Contracts.TechnicalReviews.Models
     public class TechnicalReviewModel
     {
         public int Id { get; set; }
-        public int VehicleId { get; set; }
+        public int? VehicleId { get; set; }
         public DateTime Date { get; set; }
         public DateTime DueDate { get; set; }
         public bool Passed { get; set; }

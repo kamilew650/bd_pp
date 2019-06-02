@@ -12,8 +12,8 @@ namespace PublicTransportApi.Services.Contracts.BusStopsOnRoutes.Models
     public class BusStopOnRouteModel
     {
         public int Id { get; set; }
-        public int RouteId { get; set; }
-        public int BusStopId { get; set; }
+        public int? RouteId { get; set; }
+        public int? BusStopId { get; set; }
         public int? PreviousBusStopOnRouteId { get; set; }
 
         public RouteModel Route { get; set; }

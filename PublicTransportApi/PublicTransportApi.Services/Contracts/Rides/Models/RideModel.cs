@@ -11,9 +11,9 @@ namespace PublicTransportApi.Services.Contracts.Rides.Models
     public class RideModel
     {
         public int Id { get; set; }
-        public int CourseId { get; set; }
-        public int VehicleId { get; set; }
-        public int DriverId { get; set; }
+        public int? CourseId { get; set; }
+        public int? VehicleId { get; set; }
+        public int? DriverId { get; set; }
         public DateTime Date { get; set; }
         public int TicketsCount { get; set; }
         public double UsedFuel { get; set; }

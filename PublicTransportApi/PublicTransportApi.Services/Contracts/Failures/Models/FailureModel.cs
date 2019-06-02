@@ -11,7 +11,7 @@ namespace PublicTransportApi.Services.Contracts.Failures.Models
     {
         public int Id { get; set; }
         public int VehicleId { get; set; }
-        public int NotifyingUserId { get; set; }
+        public int? NotifyingUserId { get; set; }
         public string Description { get; set; }
         public bool Repaired { get; set; }
         public DateTime NotificationDate { get; set; }

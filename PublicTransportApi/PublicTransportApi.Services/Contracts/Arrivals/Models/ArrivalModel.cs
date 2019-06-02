@@ -10,8 +10,8 @@ namespace PublicTransportApi.Services.Contracts.Arrivals.Models
     public class ArrivalModel
     {
         public int Id { get; set; }
-        public int CourseId { get; set; }
-        public int BusStopOnRouteId { get; set; }
+        public int? CourseId { get; set; }
+        public int? BusStopOnRouteId { get; set; }
         public DateTime Time { get; set; }
 
         public CourseModel Course { get; set; }

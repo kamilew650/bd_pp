@@ -22,6 +22,9 @@ namespace PublicTransportApi.Services.Contracts.Failures.Models
         public VehicleModel Vehicle { get; set; }
         public UserModel NotifyingUser { get; set; }
 
+        public FailureModel()
+        {
+        }
         public FailureModel(Failure failure)
         {
             Id = failure.Id;

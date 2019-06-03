@@ -31,7 +31,7 @@ export class FailureService {
     return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
   }
 
-  getVehicles() {
+  get() {
     // return this.httpService
     //   .post(`${url}/failures`)
     //   .toPromise()
@@ -46,17 +46,33 @@ export class FailureService {
       resolve([
         {
           id: 1,
-          firstName: "Imie1",
-          lastName: "Nazwisko1",
-          login: "login1",
-          role: RoleEnum.ADMIN,
+          vehicleId: 2,
+          description: "To jest opis",
+          repaired: false,
+          notificationDate: new Date(),
+          acceptedForRepair: false,
+          endOfRepairDate: null,
+          plannedEndOfRepairDate: null
         },
         {
           id: 2,
-          firstName: "Imie2",
-          lastName: "Nazwisko2",
-          login: "login2",
-          role: RoleEnum.DRIVER,
+          vehicleId: 5,
+          description: "To jest opis ale troche inny",
+          repaired: false,
+          notificationDate: new Date(),
+          acceptedForRepair: true,
+          endOfRepairDate: null,
+          plannedEndOfRepairDate: new Date()
+        },
+        {
+          id: 3,
+          vehicleId: 8,
+          description: "To jest opis ale troche jeszcze bardziej inny",
+          repaired: true,
+          notificationDate: new Date(),
+          acceptedForRepair: true,
+          endOfRepairDate: new Date(),
+          plannedEndOfRepairDate: new Date()
         }
       ])
     })

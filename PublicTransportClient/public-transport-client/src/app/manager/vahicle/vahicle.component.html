@@ -43,7 +43,7 @@
                   <td>{{vehicle.model}}</td>
                   <td>{{vehicle.yearOfProduction}}</td>
                   <td>{{vehicle.mileage}}</td>
-                  <td>{{vehicle.purchaseDate.toISOString().substring(0, 10)}}</td>
+                  <td>{{vehicle.purchaseDate ? vehicle.purchaseDate.toISOString().substring(0, 10) : 'Brak'}}</td>
                   <td>{{vehicle.available}}</td>
                   <td>{{vehicle.seats}}</td>
                   <td>

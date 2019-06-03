@@ -4,9 +4,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DriverRoutingModule } from './driver.routing';
 import { DriverComponent } from './driver.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 @NgModule({
-  declarations: [NavbarComponent, DriverComponent],
+  declarations: [NavbarComponent, DriverComponent, VehiclesComponent],
   imports: [
     CommonModule,
     DriverRoutingModule,

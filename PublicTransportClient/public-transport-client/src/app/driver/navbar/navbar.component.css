@@ -47,3 +47,9 @@
     min-width: 315px;
   }
   
+  .btn {
+    white-space:nowrap !important;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+  

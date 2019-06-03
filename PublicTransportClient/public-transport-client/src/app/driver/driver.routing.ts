@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DriverComponent } from './driver.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 
 export const routes: Routes = [
@@ -14,7 +14,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: NavbarComponent
+        component: VehiclesComponent
       }
     ],
   }

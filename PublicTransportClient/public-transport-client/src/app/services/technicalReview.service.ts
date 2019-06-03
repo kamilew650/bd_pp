@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { RoleEnum } from '../models/RoleEnum';
 import { url } from '../congif';
-import Vehicle from '../models/Vehicle';
+import TechnicalReview from '../models/TechnicalReview';
 
 
 
@@ -31,7 +31,7 @@ export class TechnicalReviewService {
     return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
   }
 
-  getVehicles() {
+  get() {
     // return this.httpService
     //   .post(`${url}/technicalReviews`)
     //   .toPromise()
@@ -46,17 +46,17 @@ export class TechnicalReviewService {
       resolve([
         {
           id: 1,
-          firstName: "Imie1",
-          lastName: "Nazwisko1",
-          login: "login1",
-          role: RoleEnum.ADMIN,
+          vehicleId: 3,
+          date: new Date(),
+          dueDate: new Date(),
+          passed: false
         },
         {
           id: 2,
-          firstName: "Imie2",
-          lastName: "Nazwisko2",
-          login: "login2",
-          role: RoleEnum.DRIVER,
+          vehicleId: 4,
+          date: new Date(),
+          dueDate: new Date(),
+          passed: true
         }
       ])
     })
@@ -75,7 +75,7 @@ export class TechnicalReviewService {
       })
   }
 
-  add(review: Vehicle) {
+  add(review: TechnicalReview) {
     return this.http
       .post(`${url}/technicalReviews`, review, { headers: this.getAuthHeader() })
       .toPromise()
@@ -88,7 +88,7 @@ export class TechnicalReviewService {
       })
   }
 
-  update(id: number, review: Vehicle) {
+  update(id: number, review: TechnicalReview) {
     return this.http
       .put(`${url}/technicalReviews/${id}`, review, { headers: this.getAuthHeader() })
       .toPromise()

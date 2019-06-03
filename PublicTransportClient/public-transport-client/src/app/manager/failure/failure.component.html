@@ -32,10 +32,10 @@
                 <tr *ngFor="let failure of failures">
                   <td>{{failure.id}}</td>
                   <td>{{failure.vehicleId}}</td>
-                  <td>{{failure.repaired}}</td>
+                  <td>{{failure.repaired ? "Tak" : "Nie"}}</td>
                   <td>{{failure.notificationDate ? failure.notificationDate.toISOString().substring(0, 10) : 'Brak'}}
                   </td>
-                  <td>{{failure.acceptedForRepair}}</td>
+                  <td>{{failure.acceptedForRepair ? "Tak" : "Nie"}}</td>
                   <td>{{failure.endOfRepairDate ? failure.endOfRepairDate.toISOString().substring(0, 10) : 'Brak'}}</td>
                   <td>
                     {{failure.plannedEndOfRepairDate ? failure.plannedEndOfRepairDate.toISOString().substring(0, 10) : 'Brak'}}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import TechnicalReview from 'src/app/models/TechnicalReview';
+import { TechnicalReviewService } from 'src/app/services/technicalReview.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-survey',
@@ -7,9 +10,63 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private technicalReviewService: TechnicalReviewService, private modalService: NgbModal) { }
+
+  reviews: TechnicalReview[]
+  selectedTechnicalReview: TechnicalReview
+  newTechnicalReview: TechnicalReview
+  technicalReviewToEdit: TechnicalReview
+  step: number
 
   ngOnInit() {
+    this.technicalReviewService.get().then(reviews => {
+      console.log(reviews)
+      this.reviews = reviews as TechnicalReview[]
+    })
+  }
+
+  initial() {
+    this.technicalReviewService.get().then(reviews => {
+      console.log(reviews)
+      this.reviews = reviews as TechnicalReview[]
+    })
+  }
+
+  open(content) {
+    this.newTechnicalReview = new TechnicalReview
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' })
+  }
+
+  openAddModal(content) {
+    this.step = 1
+    this.open(content)
+  }
+
+  openEditModal(id: number, content) {
+    this.step = 2
+    this.technicalReviewToEdit = this.reviews.find(u => u.id == id)
+    this.selectedTechnicalReview = { ...this.technicalReviewToEdit }
+    this.open(content)
+  }
+
+  deleteTechnicalReview(id: number) {
+    this.technicalReviewService.delete(id).then(res => {
+      this.reviews = this.reviews.filter(u => u.id !== id)
+    })
+  }
+
+  addTechnicalReview() {
+    this.technicalReviewService.add(this.newTechnicalReview).then(res => {
+      this.initial()
+      this.modalService.dismissAll()
+    })
+  }
+
+  editTechnicalReview() {
+    this.technicalReviewService.update(this.selectedTechnicalReview.id, this.selectedTechnicalReview).then(res => {
+      this.initial()
+      this.modalService.dismissAll()
+    })
   }
 
 }

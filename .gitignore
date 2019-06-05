@@ -346,3 +346,13 @@ healthchecksdb
 
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
+
+.vscode
+PublicTransportApi/PublicTransportApi/bin/
+PublicTransportApi/PublicTransportApi/obj/
+PublicTransportApi/PublicTransportApi.Common/bin/
+PublicTransportApi/PublicTransportApi.Common/obj/
+PublicTransportApi/PublicTransportApi.Core/bin/
+PublicTransportApi/PublicTransportApi.Core/obj/
+PublicTransportApi/PublicTransportApi.Services/bin/
+PublicTransportApi/PublicTransportApi.Services/obj/

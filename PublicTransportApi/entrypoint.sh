@@ -1,9 +1,9 @@
 #!/bin/bash
 
 set -e
-run_cmd="dotnet run --server.urls http://*:80"
+run_cmd="dotnet run --server.urls http://*:80 --project PublicTransportApi"
 
-until dotnet ef database update; do
+until dotnet ef database update -p PublicTransportApi.Core -s PublicTransportApi; do
 >&2 echo "SQL Server is starting up"
 sleep 1
 done

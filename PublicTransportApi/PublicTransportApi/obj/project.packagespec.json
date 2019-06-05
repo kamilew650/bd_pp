@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/PublicTransportApi.csproj",
+    "projectUniqueName": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi/PublicTransportApi.csproj",
     "projectName": "PublicTransportApi",
-    "projectPath": "/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/PublicTransportApi.csproj",
-    "outputPath": "/home/kamil/Documents/KamilStudia/pp/projekt/PublicTransportApi/PublicTransportApi/obj/",
+    "projectPath": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi/PublicTransportApi.csproj",
+    "outputPath": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -14,7 +14,17 @@
     ],
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Common/PublicTransportApi.Common.csproj": {
+            "projectPath": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Common/PublicTransportApi.Common.csproj"
+          },
+          "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Core/PublicTransportApi.Core.csproj": {
+            "projectPath": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Core/PublicTransportApi.Core.csproj"
+          },
+          "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Services/PublicTransportApi.Services.csproj": {
+            "projectPath": "/home/kamil/Documents/KamilStudia/pp_bd/projekt/PublicTransportApi/PublicTransportApi.Services/PublicTransportApi.Services.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -37,11 +47,19 @@
           "target": "Package",
           "version": "[2.2.0, )"
         },
+        "Microsoft.Extensions.Options": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[2.2.0, )"
         }
       },
       "imports": [

@@ -1,12 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2018.3/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_PublicTransportApi.74609462.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.3/system/resharper-host/local/Transient/ReSharperHost/v183/SolutionCaches/_PublicTransportApi.-1022529379.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="PublicTransportApi" t="IncludeRecursive">
         <e p="Controllers" t="Include">
+          <e p="BaseController.cs" t="Include" />
+          <e p="FailureController.cs" t="Include" />
+          <e p="TechnicalReviewController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
+          <e p="VehicleController.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="ViewModels" t="Include">
+            <e p="Failure" t="Include">
+              <e p="FailureVM.cs" t="Include" />
+            </e>
+            <e p="TechnicalReview" t="Include">
+              <e p="TechnicalReviewVM.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="UserVM.cs" t="Include" />
+            </e>
+            <e p="Vehicle" t="Include">
+              <e p="VehicleVM.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -21,6 +44,168 @@
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
               <e p="PublicTransportApi.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="PublicTransportApi.Common" t="IncludeRecursive">
+        <e p="Class1.cs" t="Include" />
+        <e p="Configurations" t="Include">
+          <e p="AppSettings.cs" t="Include" />
+        </e>
+        <e p="PublicTransportApi.Common.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="PublicTransportApi.Common.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="PublicTransportApi.Core" t="IncludeRecursive">
+        <e p="DbInitializer.cs" t="Include" />
+        <e p="DefaultDbContext.cs" t="Include" />
+        <e p="Entities" t="Include">
+          <e p="Arrival.cs" t="Include" />
+          <e p="BusStop.cs" t="Include" />
+          <e p="BusStopOnRoute.cs" t="Include" />
+          <e p="Course.cs" t="Include" />
+          <e p="Failure.cs" t="Include" />
+          <e p="Line.cs" t="Include" />
+          <e p="Ride.cs" t="Include" />
+          <e p="Route.cs" t="Include" />
+          <e p="TechnicalReview.cs" t="Include" />
+          <e p="User.cs" t="Include" />
+          <e p="Vehicle.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20190602191405_default.Designer.cs" t="Include" />
+          <e p="20190602191405_default.cs" t="Include" />
+          <e p="DefaultDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="PublicTransportApi.Core.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="PublicTransportApi.Core.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="PublicTransportApi.Services" t="IncludeRecursive">
+        <e p="BaseService.cs" t="Include" />
+        <e p="Contracts" t="Include">
+          <e p="Arrivals" t="Include">
+            <e p="CreateArrivalResponse.cs" t="Include" />
+            <e p="GetArrivalResponse.cs" t="Include" />
+            <e p="GetArrivalsResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="ArrivalModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Base" t="Include">
+            <e p="BaseContractResponse.cs" t="Include" />
+          </e>
+          <e p="BusStops" t="Include">
+            <e p="CreateBusStopResponse.cs" t="Include" />
+            <e p="GetBusStopResponse.cs" t="Include" />
+            <e p="GetBusStopsResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="BusStopModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="BusStopsOnRoutes" t="Include">
+            <e p="CreateBusStopOnRouteResponse.cs" t="Include" />
+            <e p="GetBusStopOnRouteResponse.cs" t="Include" />
+            <e p="GetBusStopsOnRouteResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="BusStopOnRouteModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Courses" t="Include">
+            <e p="CreateCourseResponse.cs" t="Include" />
+            <e p="GetCourseResponse.cs" t="Include" />
+            <e p="GetCoursesResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="CourseModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Failures" t="Include">
+            <e p="CreateFailureResponse.cs" t="Include" />
+            <e p="GetFailureResponse.cs" t="Include" />
+            <e p="GetFailuresResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="FailureModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Lines" t="Include">
+            <e p="CreateLineResponse.cs" t="Include" />
+            <e p="GetLineResponse.cs" t="Include" />
+            <e p="GetLinesResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="LineModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Rides" t="Include">
+            <e p="CreateRideResponse.cs" t="Include" />
+            <e p="GetRideResponse.cs" t="Include" />
+            <e p="GetRidesResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="RideModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Routes" t="Include">
+            <e p="CreateRouteResponse.cs" t="Include" />
+            <e p="GetRouteResponse.cs" t="Include" />
+            <e p="GetRoutesResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="RouteModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="TechnicalReviews" t="Include">
+            <e p="CreateTechnicalReviewResponse.cs" t="Include" />
+            <e p="GetTechnicalReviewResponse.cs" t="Include" />
+            <e p="GetTechnicalReviewsResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="TechnicalReviewModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Users" t="Include">
+            <e p="CreateUserResponse.cs" t="Include" />
+            <e p="GetUserResponse.cs" t="Include" />
+            <e p="GetUsersResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="UserModel.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Vehicles" t="Include">
+            <e p="CreateVehicleResponse.cs" t="Include" />
+            <e p="GetVehicleResponse.cs" t="Include" />
+            <e p="GetVehiclesResponse.cs" t="Include" />
+            <e p="Models" t="Include">
+              <e p="VehicleModel.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="FailureService.cs" t="Include" />
+        <e p="Interface" t="Include">
+          <e p="IBaseService.cs" t="Include" />
+          <e p="IFailureService.cs" t="Include" />
+          <e p="ITechnicalReviewService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+          <e p="IVehicleService.cs" t="Include" />
+        </e>
+        <e p="PublicTransportApi.Services.csproj" t="IncludeRecursive" />
+        <e p="TechnicalReviewService.cs" t="Include" />
+        <e p="UserService.cs" t="Include" />
+        <e p="VehicleService.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="PublicTransportApi.Services.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>

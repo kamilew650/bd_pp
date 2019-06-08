@@ -21,6 +21,10 @@ namespace PublicTransportApi.Services.Contracts.Routes.Models
 
         public ICollection<BusStopOnRouteModel> BusStopsOnRoute { get; set; }
 
+        public RouteModel()
+        {
+
+        }
 
 
         public RouteModel(Route route)

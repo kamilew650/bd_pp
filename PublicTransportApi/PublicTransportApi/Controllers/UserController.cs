@@ -18,9 +18,6 @@ namespace PublicTransportApi.Controllers
         private IUserService _userService;
 
         public UserController(IUserService userService)
-
-
-
         {
             _userService = userService;
         }

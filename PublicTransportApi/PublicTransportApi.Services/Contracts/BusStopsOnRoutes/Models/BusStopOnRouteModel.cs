@@ -23,6 +23,10 @@ namespace PublicTransportApi.Services.Contracts.BusStopsOnRoutes.Models
 
         public ICollection<ArrivalModel> Arrivals { get; set; }
 
+        public BusStopOnRouteModel()
+        {
+
+        }
 
         public BusStopOnRouteModel(BusStopOnRoute busStopOnRoute)
         {

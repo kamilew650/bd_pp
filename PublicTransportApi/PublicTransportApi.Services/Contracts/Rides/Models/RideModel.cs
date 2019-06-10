@@ -22,6 +22,10 @@ namespace PublicTransportApi.Services.Contracts.Rides.Models
         public CourseModel Course { get; set; }
         public VehicleModel Vehicle { get; set; }
         public UserModel Driver { get; set; }
+        public RideModel()
+        {
+
+        }
 
         public RideModel(Ride ride)
         {

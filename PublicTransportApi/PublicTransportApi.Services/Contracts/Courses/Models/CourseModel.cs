@@ -18,6 +18,11 @@ namespace PublicTransportApi.Services.Contracts.Courses.Models
         public ICollection<ArrivalModel> Arrivals { get; set; }
         public ICollection<RideModel> Rides { get; set; }
 
+        public CourseModel()
+        {
+
+        }
+
         public CourseModel(Course course)
         {
             if (course== null)

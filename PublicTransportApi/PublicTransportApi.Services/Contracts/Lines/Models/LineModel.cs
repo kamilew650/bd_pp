@@ -13,7 +13,10 @@ namespace PublicTransportApi.Services.Contracts.Lines.Models
         public string Number { get; set; }
 
         public ICollection<RouteModel> Routes { get; set; }
+        public LineModel()
+        {
 
+        }
         public LineModel(Line line)
         {
             if (line == null)

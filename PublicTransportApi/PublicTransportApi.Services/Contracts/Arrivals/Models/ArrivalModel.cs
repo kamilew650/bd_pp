@@ -17,6 +17,12 @@ namespace PublicTransportApi.Services.Contracts.Arrivals.Models
         public CourseModel Course { get; set; }
         public BusStopOnRouteModel BusStopOnRoute { get; set; }
 
+
+        public ArrivalModel()
+        {
+
+        }
+
         public ArrivalModel(Arrival arrival)
         {
             if (arrival == null)

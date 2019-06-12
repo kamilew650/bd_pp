@@ -8,8 +8,15 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="PublicTransportApi" t="IncludeRecursive">
         <e p="Controllers" t="Include">
+          <e p="ArrivalController.cs" t="Include" />
           <e p="BaseController.cs" t="Include" />
+          <e p="BusStopController.cs" t="Include" />
+          <e p="BusStopOnRouteController.cs" t="Include" />
+          <e p="CourseController.cs" t="Include" />
           <e p="FailureController.cs" t="Include" />
+          <e p="LineController.cs" t="Include" />
+          <e p="RideController.cs" t="Include" />
+          <e p="RouteController.cs" t="Include" />
           <e p="TechnicalReviewController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
           <e p="ValuesController.cs" t="Include" />
@@ -17,8 +24,29 @@
         </e>
         <e p="Models" t="Include">
           <e p="ViewModels" t="Include">
+            <e p="Arrival" t="Include">
+              <e p="ArrivalVM.cs" t="Include" />
+            </e>
+            <e p="BusStop" t="Include">
+              <e p="BusStopVM.cs" t="Include" />
+            </e>
+            <e p="BusStopOnRoute" t="Include">
+              <e p="BusStopOnRouteVM.cs" t="Include" />
+            </e>
+            <e p="Course" t="Include">
+              <e p="CourseVM.cs" t="Include" />
+            </e>
             <e p="Failure" t="Include">
               <e p="FailureVM.cs" t="Include" />
+            </e>
+            <e p="Line" t="Include">
+              <e p="LineVM.cs" t="Include" />
+            </e>
+            <e p="Ride" t="Include">
+              <e p="RideVM.cs" t="Include" />
+            </e>
+            <e p="Route" t="Include">
+              <e p="RouteVM.cs" t="Include" />
             </e>
             <e p="TechnicalReview" t="Include">
               <e p="TechnicalReviewVM.cs" t="Include" />
@@ -95,7 +123,10 @@
         </e>
       </e>
       <e p="PublicTransportApi.Services" t="IncludeRecursive">
+        <e p="ArrivalService.cs" t="Include" />
         <e p="BaseService.cs" t="Include" />
+        <e p="BusStopOnRouteService.cs" t="Include" />
+        <e p="BusStopService.cs" t="Include" />
         <e p="Contracts" t="Include">
           <e p="Arrivals" t="Include">
             <e p="CreateArrivalResponse.cs" t="Include" />
@@ -189,15 +220,26 @@
             </e>
           </e>
         </e>
+        <e p="CourseService.cs" t="Include" />
         <e p="FailureService.cs" t="Include" />
         <e p="Interface" t="Include">
+          <e p="IArrivalService.cs" t="Include" />
           <e p="IBaseService.cs" t="Include" />
+          <e p="IBusStopOnRouteService.cs" t="Include" />
+          <e p="IBusStopService.cs" t="Include" />
+          <e p="ICourseService.cs" t="Include" />
           <e p="IFailureService.cs" t="Include" />
+          <e p="ILineService.cs" t="Include" />
+          <e p="IRideService.cs" t="Include" />
+          <e p="IRouteService.cs" t="Include" />
           <e p="ITechnicalReviewService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="IVehicleService.cs" t="Include" />
         </e>
+        <e p="LineService.cs" t="Include" />
         <e p="PublicTransportApi.Services.csproj" t="IncludeRecursive" />
+        <e p="RideService.cs" t="Include" />
+        <e p="RouteService.cs" t="Include" />
         <e p="TechnicalReviewService.cs" t="Include" />
         <e p="UserService.cs" t="Include" />
         <e p="VehicleService.cs" t="Include" />

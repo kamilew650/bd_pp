@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 namespace PublicTransportApi.Controllers
 {
     //[Authorize]
-    //[ApiController]
-    //[Route("api/[controller]")]
+    [ApiController]
+    [Route("api/[controller]")]
     public class UserController : BaseController
     {
         private IUserService _userService;
@@ -55,17 +55,17 @@ namespace PublicTransportApi.Controllers
 
 
 
-        //[AllowAnonymous]
-        //[HttpPost("authenticate")]
-        //public IActionResult Authenticate([FromBody]User userParam)
-        //{
-        //    var user = _userService.Authenticate(userParam.Login, userParam.Password);
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody]User userParam)
+        {
+            var user = _userService.Authenticate(userParam.Login, userParam.Password);
 
-        //    if (user == null)
-        //        return BadRequest(new { message = "Username or password is incorrect" });
+            if (user == null)
+                return BadRequest(new { message = "Username or password is incorrect" });
 
-        //    return Ok(user);
-        //}
+            return Ok(user);
+        }
 
     }
 }

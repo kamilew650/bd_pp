@@ -3,7 +3,8 @@ services:
     web:
         build: ./PublicTransportApi/
         ports:
-            - "8000:80"
+            - "8000:5000"
+            - "8001:5001"
         depends_on:
             - db
     db:
@@ -11,3 +12,5 @@ services:
         environment:
             SA_PASSWORD: "Your_password123"
             ACCEPT_EULA: "Y"
+        ports:
+            - "8500:1433"

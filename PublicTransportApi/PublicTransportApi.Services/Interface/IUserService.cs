@@ -21,5 +21,7 @@ namespace PublicTransportApi.Services.Interface
 
         BaseContractResponse DeleteUser(int userId);
 
+        User Authenticate(string username, string password);
+
     }
 }

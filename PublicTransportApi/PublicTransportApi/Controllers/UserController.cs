@@ -61,6 +61,9 @@ namespace PublicTransportApi.Controllers
         {
             var user = _userService.Authenticate(userParam.Login, userParam.Password);
 
+            if(userParam.Login == null || userParam.Password == null)
+                return BadRequest(new { message = "Brak loginu lub hasla" });
+            
             if (user == null)
                 return BadRequest(new { message = "Username or password is incorrect" });
 

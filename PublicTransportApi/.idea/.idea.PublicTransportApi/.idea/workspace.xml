@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc3be5fb-e85a-4566-a304-2989bdb2b05c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PublicTransportApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PublicTransportApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Startup.cs" afterDir="false" />
-    </list>
+    <list default="true" id="fc3be5fb-e85a-4566-a304-2989bdb2b05c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+            <state relative-caret-position="176">
+              <caret line="38" column="66" lean-forward="true" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
               <folding>
                 <marker date="1560609390722" expanded="false" signature="6:657" ph="..." />
                 <marker date="1560609390722" expanded="true" signature="696:4554" ph="{...}" />
@@ -186,6 +182,11 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>builder</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -305,12 +306,12 @@
       <workItem from="1559560506633" duration="676000" />
       <workItem from="1559574274265" duration="638000" />
       <workItem from="1560353520226" duration="4747000" />
-      <workItem from="1560606833684" duration="1110000" />
+      <workItem from="1560606833684" duration="1579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7380000" />
+    <option name="totallyTimeSpent" value="7849000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,8 +539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        <state relative-caret-position="176">
+          <caret line="38" column="66" lean-forward="true" selection-start-line="38" selection-start-column="66" selection-end-line="38" selection-end-column="66" />
           <folding>
             <marker date="1560609390722" expanded="false" signature="6:657" ph="..." />
             <marker date="1560609390722" expanded="true" signature="696:4554" ph="{...}" />

@@ -36,7 +36,7 @@ namespace PublicTransportApi.Services
         public User Authenticate(string username, string password)
         {
             Console.WriteLine(username, password);
-            var user = _users.SingleOrDefault(x => x.Login == username && x.Password == password);
+            var user = _users.Find(x => x.Login == username && x.Password == password);
             // return null if user not found
             if (user == null)
                 return null;

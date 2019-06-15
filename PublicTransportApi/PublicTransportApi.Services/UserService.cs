@@ -36,13 +36,13 @@ namespace PublicTransportApi.Services
         public User Authenticate(string username, string password)
         {
             Console.WriteLine(username, password);
-            var user = _users.Find(x => x.Login == username && x.Password == password);
+            var user = _dbContext.Users.SingleOrDefault(x => x.Login == username && x.Password == password);
             // return null if user not found
             if (user == null)
                 return null;
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+            var key = Encoding.ASCII.GetBytes("sekretnysekretsamdnakkkskdkriewqw");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]

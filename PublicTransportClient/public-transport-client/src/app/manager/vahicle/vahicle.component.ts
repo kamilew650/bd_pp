@@ -20,8 +20,12 @@ export class VehicleComponent implements OnInit {
 
   ngOnInit() {
     this.vehicleService.get().then(vehicles => {
-      console.log(vehicles)
       this.vehicles = vehicles as Vehicle[]
+      this.vehicles = this.vehicles.map(v => {
+        v.purchaseDate = new Date(v.purchaseDate)
+        v.yearOfProduction = new Date(v.yearOfProduction)
+        return v
+      })
     })
   }
 
@@ -29,6 +33,11 @@ export class VehicleComponent implements OnInit {
     this.vehicleService.get().then(vehicles => {
       console.log(vehicles)
       this.vehicles = vehicles as Vehicle[]
+      this.vehicles = this.vehicles.map(v => {
+        v.purchaseDate = new Date(v.purchaseDate)
+        v.yearOfProduction = new Date(v.yearOfProduction)
+        return v
+      })
     })
   }
 

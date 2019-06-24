@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
-    //[Authorize]
+    /*[Authorize]*/
     [ApiController]
     [Route("api/[controller]")]
     public class UserController : BaseController
@@ -34,7 +34,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _userService.GetUser(userId), r => r.User);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateUser([FromBody]UserVM userViewModel)
         {
             return GetResult(() => _userService.CreateUser(userViewModel.MapToUserModel()), r => r);
@@ -46,7 +46,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _userService.UpdateUser(userViewModel.MapToUserModel()), r => r);
         }
 
-        [HttpGet, Route("{userId}/delete")]
+        [HttpDelete, Route("{userId}/delete")]
         public IActionResult DeleteUser(int userId)
         {
             return GetResult(() => _userService.DeleteUser(userId), r => r);

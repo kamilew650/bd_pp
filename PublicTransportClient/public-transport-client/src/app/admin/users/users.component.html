@@ -33,7 +33,7 @@
                   <td>{{user.firstName}}</td>
                   <td>{{user.lastName}}</td>
                   <td>{{user.login}}</td>
-                  <td>{{user.role}}</td>
+                  <td>{{getRoleName(user.role)}}</td>
                   <td>
                     <button class="btn btn-warning" (click)="openEditModal(user.id, content)"><i
                         class="fas fa-edit"></i></button>
@@ -87,17 +87,25 @@
         </div>
       </div>
       <div class="form-group">
+        <label for="role">Rola</label>
+        <select class="form-control" [(ngModel)]="newUser.role" id="firstName" name="login" ngControl="login"
+          #login="ngModel" required>
+          <option *ngFor="let role of roles" [value]="role.value">{{role.title}}</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="dateOfBirth">Hasło</label>
         <div class="input-group">
-          <input [(ngModel)]="newUser.password" id="password" name="password" ngControl="password" #password="ngModel"
-            required class="form-control" placeholder="Podaj hasło...">
+          <input [(ngModel)]="newUser.password" id="password" type='password' name="password" ngControl="password"
+            #password="ngModel" required class="form-control" placeholder="Podaj hasło...">
         </div>
       </div>
       <div class="form-group">
         <label for="dateOfBirth">Powtórz hasło</label>
         <div class="input-group">
-          <input [(ngModel)]="passwordAgain" id="passwordAgain" name="passwordAgain" ngControl="passwordAgain"
-            #passwordAgainVal="ngModel" required class="form-control" placeholder="Powtórz hasło...">
+          <input [(ngModel)]="passwordAgain" id="passwordAgain" type='password' name="passwordAgain"
+            ngControl="passwordAgain" #passwordAgainVal="ngModel" required class="form-control"
+            placeholder="Powtórz hasło...">
         </div>
       </div>
     </form>
@@ -126,17 +134,25 @@
         </div>
       </div>
       <div class="form-group">
+        <label for="role">Rola</label>
+        <select class="form-control" [(ngModel)]="selectedUser.role" id="firstName" name="login" ngControl="login"
+          #login="ngModel" required>
+          <option *ngFor="let role of roles" [value]="role.value">{{role.title}}</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="dateOfBirth">Hasło</label>
         <div class="input-group">
-          <input [(ngModel)]="selectedUser.password" id="password" name="password" ngControl="password"
+          <input [(ngModel)]="selectedUser.password" type='password' id="password" name="password" ngControl="password"
             #password="ngModel" required class="form-control" placeholder="Podaj hasło...">
         </div>
       </div>
       <div class="form-group">
         <label for="dateOfBirth">Powtórz hasło</label>
         <div class="input-group">
-          <input [(ngModel)]="passwordAgain" id="passwordAgain" name="passwordAgain" ngControl="passwordAgain"
-            #passwordAgainVal="ngModel" required class="form-control" placeholder="Powtórz hasło...">
+          <input [(ngModel)]="passwordAgain" id="passwordAgain" type='password' name="passwordAgain"
+            ngControl="passwordAgain" #passwordAgainVal="ngModel" required class="form-control"
+            placeholder="Powtórz hasło...">
         </div>
       </div>
     </form>

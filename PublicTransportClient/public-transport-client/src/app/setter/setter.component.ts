@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-setter',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SetterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
+    if (!this.loginService.user || !this.loginService.token)
+      this.router.navigate(["/"])
   }
 
 }

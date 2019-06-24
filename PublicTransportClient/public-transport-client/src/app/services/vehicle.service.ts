@@ -24,7 +24,7 @@ export class VehicleService {
 
 
   protected getToken() {
-    return this.cookieService.get('te_token')
+    return this.loginService.token
   }
 
   getAuthHeader() {
@@ -32,48 +32,25 @@ export class VehicleService {
   }
 
   get() {
-    // return this.httpService
-    //   .post(`${url}/vehicle`)
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
-    return new Promise((resolve, reject) => {
-      resolve([
-        {
-          id: 1,
-          brand: "Marka1",
-          model: "Model1",
-          yearOfProduction: 2001,
-          mileage: 1000,
-          purchaseDate: new Date(),
-          available: true,
-          seats: 12,
-        },
-        {
-          id: 2,
-          brand: "Marka2",
-          model: "Model2",
-          yearOfProduction: 2001,
-          mileage: 1023,
-          purchaseDate: new Date(),
-          available: false,
-          seats: 12,
-        }
-      ])
-    })
+    return this.http
+      .get(`${url}/vehicle`)
+      .toPromise()
+      .then((response) => {
+        const vehicles = response
+        console.log(vehicles)
+        return vehicles
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 
   getOne(id: number) {
     return this.http
-      .get(`${url}/vehicles/${id}`, { headers: this.getAuthHeader() })
+      .get(`${url}/vehicle/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
-      .then((response: Response) => {
-        const vehicle = response.json()
+      .then((response) => {
+        const vehicle = response
         return vehicle
       })
       .catch(error => {
@@ -83,10 +60,10 @@ export class VehicleService {
 
   add(vehicle: Vehicle) {
     return this.http
-      .post(`${url}/vehicles`, vehicle, { headers: this.getAuthHeader() })
+      .post(`${url}/vehicle`, vehicle, { headers: this.getAuthHeader() })
       .toPromise()
-      .then((response: Response) => {
-        const vehicle = response.json()
+      .then((response) => {
+        const vehicle = response
         return vehicle
       })
       .catch(error => {
@@ -96,10 +73,10 @@ export class VehicleService {
 
   update(id: number, vehicle: Vehicle) {
     return this.http
-      .put(`${url}/vehicles/${id}`, vehicle, { headers: this.getAuthHeader() })
+      .put(`${url}/vehicle/${id}`, vehicle, { headers: this.getAuthHeader() })
       .toPromise()
-      .then((response: Response) => {
-        const vehicle = response.json()
+      .then((response) => {
+        const vehicle = response
         return vehicle
       })
       .catch(error => {
@@ -109,10 +86,10 @@ export class VehicleService {
 
   delete(id: number) {
     return this.http
-      .delete(`${url}/vehicles/${id}`, { headers: this.getAuthHeader() })
+      .delete(`${url}/vehicle/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
-      .then((response: Response) => {
-        const vehicle = response.json()
+      .then((response) => {
+        const vehicle = response
         return vehicle
       })
       .catch(error => {

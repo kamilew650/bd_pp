@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Configuration;
@@ -35,18 +36,10 @@ namespace PublicTransportApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
-
-            services.AddCors(options =>
-                options.AddPolicy("MyPolicy", builder =>
-                {
-                    builder.WithOrigins("http://localhost:4200")
-                        .AllowAnyMethod()
-                        .AllowCredentials()
-                        .AllowAnyHeader();
-                }));
             
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);

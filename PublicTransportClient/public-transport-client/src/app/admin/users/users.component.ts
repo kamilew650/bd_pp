@@ -4,6 +4,7 @@ import User from 'src/app/models/User';
 import { UserService } from 'src/app/services/user.service';
 import { FormBuilder, FormControl, Validators, FormGroup } from '@angular/forms';
 import { container } from '@angular/core/src/render3';
+import { RoleEnum } from 'src/app/models/RoleEnum';
 
 @Component({
   selector: 'app-users',
@@ -17,6 +18,29 @@ export class UsersComponent implements OnInit {
       this.users = users as User[]
     })
   }
+
+  roles = [
+    {
+      title: 'Kierowca',
+      value: 0
+    },
+    {
+      title: 'Dystrybutor',
+      value: 1
+    },
+    {
+      title: 'Zarządca',
+      value: 2
+    },
+    {
+      title: 'Planista',
+      value: 3
+    },
+    {
+      title: 'Administrator',
+      value: 4
+    },
+  ]
 
   users: User[]
   selectedUser: User
@@ -71,6 +95,29 @@ export class UsersComponent implements OnInit {
       this.initial()
       this.modalService.dismissAll()
     })
+  }
+
+  getRoleName(role: RoleEnum): string {
+    switch (role) {
+      case 0:
+        return 'Kierowca'
+        break
+      case 1:
+        return 'Dystrybutor'
+        break
+      case 2:
+        return 'Manager'
+        break
+      case 3:
+        return 'Planista'
+        break
+      case 4:
+        return 'Administrator'
+        break
+      default:
+        return ''
+
+    }
   }
 
 }

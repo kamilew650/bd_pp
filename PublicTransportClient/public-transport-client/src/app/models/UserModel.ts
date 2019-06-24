@@ -1,5 +1,5 @@
 export default class UserModel {
     token: string
-    role: string
+    role: number
     id: string
 }

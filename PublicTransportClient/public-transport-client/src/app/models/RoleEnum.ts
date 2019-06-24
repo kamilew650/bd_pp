@@ -1,7 +1,7 @@
 export enum RoleEnum {
-    DRIVER = 'Kierowca',
-    SETTER = 'Dystrybutor',
-    MANAGER = 'Menager',
-    PLANNER = 'Planista',
-    ADMIN = 'Administrator'
+    DRIVER = 0,
+    SETTER = 1,
+    MANAGER = 2,
+    PLANNER = 3,
+    ADMIN = 4
 }

@@ -35,22 +35,23 @@ export class HomeComponent implements OnInit {
 
   tryLogin() {
     this.loginService.login(this.login, this.password).then(res => {
-      const user = res as UserModel
+      const user = res as unknown as UserModel
+      console.log(user)
       switch (user.role) {
-        case 'admin' || RoleEnum.ADMIN:
-          this.router.navigateByUrl('/admin');
-          break
-        case 'driver' || RoleEnum.DRIVER:
+        case 0:
           this.router.navigateByUrl('/driver');
           break
-        case 'manager' || RoleEnum.MANAGER:
-          this.router.navigateByUrl('/manager');
-          break
-        case 'planner' || RoleEnum.PLANNER:
-          this.router.navigateByUrl('/manager');
-          break
-        case 'setter' || RoleEnum.SETTER:
+        case 1:
           this.router.navigateByUrl('/setter');
+          break
+        case 2:
+          this.router.navigateByUrl('/manager');
+          break
+        case 3:
+          this.router.navigateByUrl('/planner');
+          break
+        case 4:
+          this.router.navigateByUrl('/admin');
           break
         default:
           this.isError = true

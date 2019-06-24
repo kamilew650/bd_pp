@@ -22,52 +22,25 @@ export class UserService {
     private http: HttpClient
   ) { }
 
-
-  protected getToken() {
-    return this.cookieService.get('te_token')
-  }
-
   getAuthHeader() {
-    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
+    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.loginService.token })
   }
 
   getUsers() {
-    // return this.httpService
-    //   .post(`${url}/token`, { login: login, password: password })
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
-    return new Promise((resolve, reject) => {
-      resolve([
-        {
-          id: 1,
-          firstName: "Imie1",
-          lastName: "Nazwisko1",
-          login: "login1",
-          role: RoleEnum.ADMIN,
-        },
-        {
-          id: 2,
-          firstName: "Imie2",
-          lastName: "Nazwisko2",
-          login: "login2",
-          role: RoleEnum.DRIVER,
-        }
-      ])
-    })
+    return this.http
+      .get(`${url}/user`, { headers: this.getAuthHeader() })
+      .toPromise()
+      .catch(error => {
+        console.error(error)
+      })
   }
 
   getUser(id: number) {
     return this.http
-      .get(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .get(`${url}/user/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
+        const user = response
         return user
       })
       .catch(error => {
@@ -77,10 +50,10 @@ export class UserService {
 
   addUser(user: User) {
     return this.http
-      .post(`${url}/users`, user, { headers: this.getAuthHeader() })
+      .post(`${url}/user/create`, user, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
+        const user = response
         return user
       })
       .catch(error => {
@@ -90,10 +63,10 @@ export class UserService {
 
   updateUser(id: number, user: User) {
     return this.http
-      .put(`${url}/token/${id}`, user, { headers: this.getAuthHeader() })
+      .put(`${url}/user/update`, user, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
+        const user = response
         return user
       })
       .catch(error => {
@@ -103,10 +76,10 @@ export class UserService {
 
   deleteUser(id: number) {
     return this.http
-      .delete(`${url}/token/${id}`, { headers: this.getAuthHeader() })
+      .delete(`${url}/user/${id}/delete`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
-        const user = response.json()
+        const user = response
         return user
       })
       .catch(error => {

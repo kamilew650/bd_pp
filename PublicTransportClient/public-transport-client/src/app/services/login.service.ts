@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { HttpClient } from 'selenium-webdriver/http';
 import { CustomHttpService } from './custom-http.service';
 import { CookieService } from "ngx-cookie-service"
 import { url } from '../congif';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -13,14 +13,11 @@ import { url } from '../congif';
 export class LoginService {
 
   loggedUser
-  tokenModel
+  user
+  private tokenValue: string
 
   get token() {
-    if (this.cookieService.get('te_token')) {
-      return this.cookieService.get('te_token')
-    } else {
-      this.router.navigate(['/login'])
-    }
+    return this.tokenValue
   }
 
   get isLoggedIn() {
@@ -28,9 +25,9 @@ export class LoginService {
   }
 
   constructor(
-    private httpService: CustomHttpService,
     private router: Router,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private http: HttpClient
   ) { }
 
 
@@ -39,16 +36,19 @@ export class LoginService {
   }
 
   login(login: string, password: string) {
-    return this.httpService
-      .post(`${url}user/authenticate`, { login: login, password: password })
-      .toPromise()
-    // return new Promise((resolve, reject) => {
-    //   resolve({ role: "admin" })
-    // })
+    return this.http
+      .post(`${url}/user/authenticate`, { login: login, password: password })
+      .toPromise().then(model => {
+        console.log(model)
+        this.user = model
+        this.tokenValue = (model as any).token
+        return model
+      })
   }
 
   logout() {
-    this.tokenModel = null
+    this.user = null
+    this.tokenValue = null
     this.cookieService.deleteAll()
   }
 }

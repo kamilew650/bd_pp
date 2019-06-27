@@ -23,43 +23,27 @@ export class TechnicalReviewService {
   ) { }
 
 
+
   protected getToken() {
-    return this.cookieService.get('te_token')
+    return this.loginService.token
   }
 
   getAuthHeader() {
-    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
+    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.loginService.token })
   }
 
   get() {
-    // return this.httpService
-    //   .post(`${url}/technicalReviews`)
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
-    return new Promise((resolve, reject) => {
-      resolve([
-        {
-          id: 1,
-          vehicleId: 3,
-          date: new Date(),
-          dueDate: new Date(),
-          passed: false
-        },
-        {
-          id: 2,
-          vehicleId: 4,
-          date: new Date(),
-          dueDate: new Date(),
-          passed: true
-        }
-      ])
-    })
+    return this.http
+      .get(`${url}/technicalReview`)
+      .toPromise()
+      .then((response) => {
+        const vehicles = response
+        console.log(vehicles)
+        return vehicles
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
 
   getOne(id: number) {
@@ -77,7 +61,7 @@ export class TechnicalReviewService {
 
   add(review: TechnicalReview) {
     return this.http
-      .post(`${url}/technicalReviews`, review, { headers: this.getAuthHeader() })
+      .post(`${url}/technicalReview`, review, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
         const review = response.json()
@@ -90,7 +74,7 @@ export class TechnicalReviewService {
 
   update(id: number, review: TechnicalReview) {
     return this.http
-      .put(`${url}/technicalReviews/${id}`, review, { headers: this.getAuthHeader() })
+      .put(`${url}/technicalReview/update`, review, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
         const review = response.json()

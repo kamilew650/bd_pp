@@ -28,59 +28,27 @@ export class FailureService {
   }
 
   getAuthHeader() {
-    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
+    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.loginService.token })
   }
 
+
   get() {
-    // return this.httpService
-    //   .post(`${url}/failures`)
-    //   .toPromise()
-    //   .then((response: Response) => {
-    //     const tokenModel = response.json()
-    //     return tokenModel
-    //   })
-    //   .catch(error => {
-    //     console.error(error)
-    //   })
-    return new Promise((resolve, reject) => {
-      resolve([
-        {
-          id: 1,
-          vehicleId: 2,
-          description: "To jest opis",
-          repaired: false,
-          notificationDate: new Date(),
-          acceptedForRepair: false,
-          endOfRepairDate: null,
-          plannedEndOfRepairDate: null
-        },
-        {
-          id: 2,
-          vehicleId: 5,
-          description: "To jest opis ale troche inny",
-          repaired: false,
-          notificationDate: new Date(),
-          acceptedForRepair: true,
-          endOfRepairDate: null,
-          plannedEndOfRepairDate: new Date()
-        },
-        {
-          id: 3,
-          vehicleId: 8,
-          description: "To jest opis ale troche jeszcze bardziej inny",
-          repaired: true,
-          notificationDate: new Date(),
-          acceptedForRepair: true,
-          endOfRepairDate: new Date(),
-          plannedEndOfRepairDate: new Date()
-        }
-      ])
-    })
+    return this.http
+      .get(`${url}/failure`)
+      .toPromise()
+      .then((response) => {
+        const vehicles = response
+        return vehicles
+      })
+      .catch(error => {
+        console.error(error)
+      })
   }
+
 
   getOne(id: number) {
     return this.http
-      .get(`${url}/failures/${id}`, { headers: this.getAuthHeader() })
+      .get(`${url}/failure/${id}`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
         const failure = response.json()

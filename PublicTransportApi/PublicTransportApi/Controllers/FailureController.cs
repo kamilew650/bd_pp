@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
-    //[ApiController]
-    //[Route("[controller]")]
+    [ApiController]
+    [Route("api/[controller]")]
     public class FailureController : BaseController
     {
         private IFailureService _failureService;
@@ -30,7 +30,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _failureService.GetFailure(failureId), r => r.Failure);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateFailure([FromBody]FailureVM failureViewModel)
         {
             return GetResult(() => _failureService.CreateFailure(failureViewModel.MapToFailureModel()), r => r);
@@ -42,7 +42,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _failureService.UpdateFailure(failureViewModel.MapToFailureModel()), r => r);
         }
 
-        [HttpGet, Route("{failureId}/delete")]
+        [HttpDelete, Route("{failureId}/delete")]
         public IActionResult DeleteFailure(int failureId)
         {
             return GetResult(() => _failureService.DeleteFailure(failureId), r => r);

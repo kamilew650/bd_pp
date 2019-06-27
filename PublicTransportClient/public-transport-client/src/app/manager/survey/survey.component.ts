@@ -19,16 +19,16 @@ export class SurveyComponent implements OnInit {
   step: number
 
   ngOnInit() {
-    this.technicalReviewService.get().then(reviews => {
-      console.log(reviews)
-      this.reviews = reviews as TechnicalReview[]
-    })
+    this.initial()
   }
 
   initial() {
     this.technicalReviewService.get().then(reviews => {
-      console.log(reviews)
-      this.reviews = reviews as TechnicalReview[]
+      this.reviews = (reviews as any).map(el => {
+        el.dueDate = new Date(el.dueDate)
+        el.date = new Date(el.date)
+        return el
+      }) as TechnicalReview[]
     })
   }
 
@@ -63,6 +63,7 @@ export class SurveyComponent implements OnInit {
   }
 
   editTechnicalReview() {
+    delete (this.selectedTechnicalReview as any).vehicle
     this.technicalReviewService.update(this.selectedTechnicalReview.id, this.selectedTechnicalReview).then(res => {
       this.initial()
       this.modalService.dismissAll()

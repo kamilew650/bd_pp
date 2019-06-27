@@ -28,7 +28,7 @@ export class VehicleService {
   }
 
   getAuthHeader() {
-    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.getToken })
+    return new HttpHeaders({ 'Authorization': 'Bearer ' + this.loginService.token })
   }
 
   get() {
@@ -60,7 +60,7 @@ export class VehicleService {
 
   add(vehicle: Vehicle) {
     return this.http
-      .post(`${url}/vehicle`, vehicle, { headers: this.getAuthHeader() })
+      .post(`${url}/vehicle/create`, vehicle, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response) => {
         const vehicle = response
@@ -73,7 +73,7 @@ export class VehicleService {
 
   update(id: number, vehicle: Vehicle) {
     return this.http
-      .put(`${url}/vehicle/${id}`, vehicle, { headers: this.getAuthHeader() })
+      .put(`${url}/vehicle/update`, vehicle, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response) => {
         const vehicle = response
@@ -86,7 +86,7 @@ export class VehicleService {
 
   delete(id: number) {
     return this.http
-      .delete(`${url}/vehicle/${id}`, { headers: this.getAuthHeader() })
+      .delete(`${url}/vehicle/${id}/delete`, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response) => {
         const vehicle = response

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
-    //[ApiController]
-    //[Route("[controller]")]
+    [ApiController]
+    [Route("api/[controller]")]
     public class TechnicalReviewController : BaseController
     {
         private ITechnicalReviewService _technicalReviewService;
@@ -30,19 +30,19 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _technicalReviewService.GetTechnicalReview(technicalReviewId), r => r.TechnicalReview);
         }
 
-        [HttpPut]
+        [HttpPost, Route("create")]
         public IActionResult CreateTechnicalReview([FromBody]TechnicalReviewVM technicalReviewViewModel)
         {
             return GetResult(() => _technicalReviewService.CreateTechnicalReview(technicalReviewViewModel.MapToTechnicalReviewModel()), r => r);
         }
 
-        [HttpPut]
+        [HttpPut, Route("update")]
         public IActionResult UpdateTechnicalReview([FromBody]TechnicalReviewVM technicalReviewViewModel)
         {
             return GetResult(() => _technicalReviewService.UpdateTechnicalReview(technicalReviewViewModel.MapToTechnicalReviewModel()), r => r);
         }
 
-        [HttpGet, Route("{technicalReviewId}")]
+        [HttpDelete, Route("{technicalReviewId}")]
         public IActionResult DeleteTechnicalReview(int technicalReviewId)
         {
             return GetResult(() => _technicalReviewService.DeleteTechnicalReview(technicalReviewId), r => r);

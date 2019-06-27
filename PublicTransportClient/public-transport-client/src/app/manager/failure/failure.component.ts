@@ -18,16 +18,17 @@ export class FailureComponent implements OnInit {
   step: number
 
   ngOnInit() {
-    this.failureService.get().then(failures => {
-      console.log(failures)
-      this.failures = failures as Failure[]
-    })
+    this.initial()
   }
 
   initial() {
     this.failureService.get().then(failures => {
-      console.log(failures)
-      this.failures = failures as Failure[]
+      this.failures = (failures as any).map(el => {
+        el.notificationDate = new Date(el.notificationDate)
+        el.endOfRepairDate = new Date(el.endOfRepairDate)
+        el.plannedEndOfRepairDate = new Date(el.plannedEndOfRepairDate)
+        return el
+      }) as Failure[]
     })
   }
 

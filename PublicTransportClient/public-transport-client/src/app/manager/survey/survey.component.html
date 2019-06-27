@@ -32,7 +32,8 @@
                   <td>{{review.dueDate ? review.dueDate.toISOString().substring(0, 10) : "Brak"}}</td>
                   <td>{{review.passed ? "Tak" : "Nie"}}</td>
                   <td>
-                    <button class="btn btn-warning"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-warning" (click)="openEditModal(review.id, content)"><i class=" fas
+                      fa-edit"></i></button>
                   </td>
                 </tr>
               </tbody>
@@ -44,7 +45,7 @@
   </div>
 </div>
 
-<!-- <ng-template #content let-modal>
+<ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-basic-title">Dodaj użytkownika</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
@@ -54,39 +55,24 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="dateOfBirth">Imię</label>
+        <label for="dateOfBirth">Data wykonania</label>
         <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="Podaj imię...">
+          <input [(ngModel)]="selectedTechnicalReviewdueDate" id="dueDate" type="date" name="dueDate"
+            ngControl="dueDate" #passwordAgainVal="ngModel" required class="form-control"
+            placeholder="Powtórz date zakupu...">
         </div>
       </div>
       <div class="form-group">
-        <label for="dateOfBirth">Nazwisko</label>
+        <label for="dateOfBirth">Pozytywne przejście</label>
         <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="Podaj nazwisko...">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="dateOfBirth">Login</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="Podaj login...">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="dateOfBirth">Hasło</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="Podaj hasło...">
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="dateOfBirth">Powtórz hasło</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="Powtórz hasło...">
+          <input [(ngModel)]="selectedTechnicalReview.passed" id="passed" type="checkbox" name="passed"
+            ngControl="passed" #passwordAgainVal="ngModel" required class="form-control">
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Anuluj</button>
-    <button type="button" class="btn btn-primary" (click)="modal.close('Save click')">Dodaj</button>
+    <button type="button" class="btn btn-primary" (click)="editTechnicalReview()">Edytuj</button>
   </div>
-</ng-template> -->
+</ng-template>

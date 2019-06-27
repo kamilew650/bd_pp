@@ -65,6 +65,9 @@ export class VehicleComponent implements OnInit {
   }
 
   addVehicle() {
+    if (typeof (this.newVehicle.yearOfProduction) === typeof (1))
+      this.newVehicle.yearOfProduction = `${this.newVehicle.yearOfProduction}-01-01` as unknown as Date
+
     this.vehicleService.add(this.newVehicle).then(res => {
       this.initial()
       this.modalService.dismissAll()
@@ -72,6 +75,10 @@ export class VehicleComponent implements OnInit {
   }
 
   editVehicle() {
+    console.log(typeof (this.selectedVehicle.yearOfProduction))
+    if (typeof (this.selectedVehicle.yearOfProduction) === typeof (1))
+      this.selectedVehicle.yearOfProduction = `${this.selectedVehicle.yearOfProduction}-01-01` as unknown as Date
+
     this.vehicleService.update(this.selectedVehicle.id, this.selectedVehicle).then(res => {
       this.initial()
       this.modalService.dismissAll()

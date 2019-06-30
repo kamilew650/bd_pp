@@ -57,9 +57,9 @@ namespace PublicTransportApi.Services
                 var technicalReview = _dbContext.TechnicalReviews.FirstOrDefault(u => u.Id == technicalReviewModel.Id);
                 technicalReview.Id = technicalReview.Id;
                 technicalReview.VehicleId = technicalReview.VehicleId;
-                technicalReview.Date = technicalReview.Date;
+                technicalReview.Date = technicalReviewModel.Date;
                 technicalReview.DueDate = technicalReview.DueDate;
-                technicalReview.Passed = technicalReview.Passed;
+                technicalReview.Passed = technicalReviewModel.Passed;
                 _dbContext.TechnicalReviews.Update(technicalReview);
                 _dbContext.SaveChanges();
             });

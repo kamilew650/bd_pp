@@ -57,9 +57,8 @@
       <div class="form-group">
         <label for="dateOfBirth">Data wykonania</label>
         <div class="input-group">
-          <input [(ngModel)]="selectedTechnicalReviewdueDate" id="dueDate" type="date" name="dueDate"
-            ngControl="dueDate" #passwordAgainVal="ngModel" required class="form-control"
-            placeholder="Powtórz date zakupu...">
+          <input [(ngModel)]="selectedTechnicalReview.date" id="dueDate" type="date" name="dueDate" ngControl="dueDate"
+            #passwordAgainVal="ngModel" required class="form-control" placeholder="Powtórz date zakupu...">
         </div>
       </div>
       <div class="form-group">

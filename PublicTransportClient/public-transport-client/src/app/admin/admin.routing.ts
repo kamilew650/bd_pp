@@ -8,9 +8,6 @@ export const routes: Routes = [
   {
     path: '',
     component: AdminComponent,
-    data: {
-      breadcrumb: [null]
-    },
     children: [
       {
         path: '',

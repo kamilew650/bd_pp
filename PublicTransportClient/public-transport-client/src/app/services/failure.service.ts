@@ -74,7 +74,7 @@ export class FailureService {
 
   update(id: number, failure: Failure) {
     return this.http
-      .put(`${url}/failures/${id}`, failure, { headers: this.getAuthHeader() })
+      .put(`${url}/failure/update`, failure, { headers: this.getAuthHeader() })
       .toPromise()
       .then((response: Response) => {
         const failure = response.json()

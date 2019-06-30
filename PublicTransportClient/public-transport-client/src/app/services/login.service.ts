@@ -17,7 +17,16 @@ export class LoginService {
   private tokenValue: string
 
   get token() {
-    return this.tokenValue
+    if (this.tokenValue)
+      return this.tokenValue
+    else {
+      let token = this.cookieService.get('pc_token')
+      if (token) {
+        this.tokenValue = token
+        return token
+      }
+      return null
+    }
   }
 
   get isLoggedIn() {
@@ -42,6 +51,7 @@ export class LoginService {
         console.log(model)
         this.user = model
         this.tokenValue = (model as any).token
+        this.cookieService.set('pc_token', this.tokenValue)
         return model
       })
   }

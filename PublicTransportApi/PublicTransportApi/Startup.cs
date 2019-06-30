@@ -83,7 +83,7 @@ namespace PublicTransportApi
             }
             app.UseCors(builder =>
             {
-                builder.WithOrigins("http://localhost:4200")
+                builder.WithOrigins("http://localhost:4200", "http://142.93.163.204:4200")
                     .AllowAnyMethod()
                     .AllowCredentials()
                     .AllowAnyHeader();

@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace PublicTransportApi.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class BusStopController : BaseController
     {
         private IBusStopService _busStopService;
@@ -15,8 +17,10 @@ namespace PublicTransportApi.Controllers
         public BusStopController(IBusStopService busStopService)
         {
             _busStopService = busStopService;
+            
         }
 
+        [HttpGet]
         public IActionResult GetBusStops()
         {
             return GetResult(() => _busStopService.GetBusStops(), r => r.BusStops);
@@ -28,7 +32,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _busStopService.GetBusStop(busStopId), r => r.BusStop);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateBusStop([FromBody]BusStopVM busStopViewModel)
         {
             return GetResult(() => _busStopService.CreateBusStop(busStopViewModel.MapToBusStopModel()), r => r);
@@ -40,7 +44,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _busStopService.UpdateBusStop(busStopViewModel.MapToBusStopModel()), r => r);
         }
 
-        [HttpGet, Route("{busStopId}/delete")]
+        [HttpDelete, Route("{busStopId}/delete")]
         public IActionResult DeleteBusStop(int busStopId)
         {
             return GetResult(() => _busStopService.DeleteBusStop(busStopId), r => r);

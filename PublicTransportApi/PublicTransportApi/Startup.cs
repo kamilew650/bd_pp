@@ -61,6 +61,7 @@ namespace PublicTransportApi
                 };
             });
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IBusStopService, BusStopService>();
             services.AddScoped<IVehicleService, VehicleService>();
             services.AddScoped<IFailureService, FailureService>();
             services.AddScoped<ITechnicalReviewService, TechnicalReviewService>();

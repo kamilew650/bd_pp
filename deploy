@@ -1,4 +1,0 @@
-scp -r ./PublicTransportApi/ root@142.93.163.204:/root/PublicTransportApi/
-scp -r ./PublicTransportClient/public-transport-client/prod.Dockerfile root@142.93.163.204:/root/front2
-scp -r ./PublicTransportClient/public-transport-client/build/ root@142.93.163.204:/root/front
-scp -r ./docker-compose3.yml root@142.93.163.204:/root/docker-compose.ymlssh

@@ -2,9 +2,10 @@
 
 # creating dir in mail folder
 cd ./PublicTransportClient/public-transport-client/
-ng build --prod --output-path ../../build/
-cp -r ./nginx ../../build/front/nginx
-cp ./prod.Dockerfile ../../../build/front/Dockerfile
+mkdir ../../build/dist/
+ng build --prod --aot=false --build-optimizer=false --output-path ../../build/dist/
+cp -r ./nginx ../../build/
+cp ./prod.Dockerfile ../../build/Dockerfile
 
 
 

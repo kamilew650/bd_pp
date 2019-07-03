@@ -20,6 +20,7 @@ import { CommonModule } from '@angular/common';
 import { VehicleService } from './services/vehicle.service';
 import { FailureService } from './services/failure.service';
 import { TechnicalReviewService } from './services/technicalReview.service';
+import { BusStopService } from './services/busStop.service';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { TechnicalReviewService } from './services/technicalReview.service';
     ReactiveFormsModule,
     CommonModule
   ],
-  providers: [LoginService, CustomHttpService, CookieService, UserService, VehicleService, TechnicalReviewService, FailureService],
+  providers: [LoginService, CustomHttpService, CookieService, UserService, VehicleService, TechnicalReviewService, FailureService, BusStopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

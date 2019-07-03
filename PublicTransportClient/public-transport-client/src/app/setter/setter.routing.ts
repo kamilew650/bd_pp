@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SetterComponent } from './setter.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BusStopComponent } from '../planner/bus-stop/bus-stop.component';
 
 
 export const routes: Routes = [

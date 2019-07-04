@@ -13,7 +13,7 @@ using System.Text;
 
 namespace PublicTransportApi.Services
 {
-    class RideService : BaseService, IRideService
+    public class RideService : BaseService, IRideService
     {
         public RideService(DefaultDbContext dbContext, ILogger<RideService> logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
         {

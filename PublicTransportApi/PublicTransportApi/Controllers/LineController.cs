@@ -28,7 +28,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _lineService.GetLine(lineId), r => r.Line);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateLine([FromBody]LineVM lineViewModel)
         {
             return GetResult(() => _lineService.CreateLine(lineViewModel.MapToLineModel()), r => r);
@@ -40,7 +40,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _lineService.UpdateLine(lineViewModel.MapToLineModel()), r => r);
         }
 
-        [HttpGet, Route("{lineId}/delete")]
+        [HttpDelete, Route("{lineId}/delete")]
         public IActionResult DeleteLine(int lineId)
         {
             return GetResult(() => _lineService.DeleteLine(lineId), r => r);

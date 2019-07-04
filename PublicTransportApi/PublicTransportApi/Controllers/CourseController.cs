@@ -28,7 +28,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _courseService.GetCourse(courseId), r => r.Course);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateCourse([FromBody]CourseVM courseViewModel)
         {
             return GetResult(() => _courseService.CreateCourse(courseViewModel.MapToCourseModel()), r => r);
@@ -40,7 +40,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _courseService.UpdateCourse(courseViewModel.MapToCourseModel()), r => r);
         }
 
-        [HttpGet, Route("{courseId}/delete")]
+        [HttpDelete, Route("{courseId}/delete")]
         public IActionResult DeleteCourse(int courseId)
         {
             return GetResult(() => _courseService.DeleteCourse(courseId), r => r);

@@ -28,7 +28,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _busStopOnRouteService.GetBusStopOnRoute(busStopOnRouteId), r => r.BusStopOnRoute);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateBusStopOnRoute([FromBody]BusStopOnRouteVM busStopOnRouteViewModel)
         {
             return GetResult(() => _busStopOnRouteService.CreateBusStopOnRoute(busStopOnRouteViewModel.MapToBusStopOnRouteModel()), r => r);
@@ -40,7 +40,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _busStopOnRouteService.UpdateBusStopOnRoute(busStopOnRouteViewModel.MapToBusStopOnRouteModel()), r => r);
         }
 
-        [HttpGet, Route("{busStopOnRouteId}/delete")]
+        [HttpDelete, Route("{busStopOnRouteId}/delete")]
         public IActionResult DeleteBusStopOnRoute(int busStopOnRouteId)
         {
             return GetResult(() => _busStopOnRouteService.DeleteBusStopOnRoute(busStopOnRouteId), r => r);

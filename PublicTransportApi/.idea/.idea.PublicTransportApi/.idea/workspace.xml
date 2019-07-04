@@ -2,17 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc3be5fb-e85a-4566-a304-2989bdb2b05c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PublicTransportApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PublicTransportApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/ArrivalController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/ArrivalController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopOnRouteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopOnRouteController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/CourseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/CourseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/LineController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/LineController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PublicTransportApi/Controllers/RouteController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Controllers/RouteController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PublicTransportApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicTransportApi/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/3rdpartylicenses.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/main.dba31766867b598712d2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/polyfills.7f123e80ee67bd50176c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/runtime.26209474bfa8dc87a77c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../build/styles.f0b28ad581a97540732f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deploy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../build/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/dist/main.91c408fde2bc12218916.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,93 +42,188 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/ValuesController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="-112">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding>
-                <marker date="1561561189871" expanded="false" signature="6:657" ph="..." />
-                <marker date="1561561189871" expanded="true" signature="696:4651" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="755:4649" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="821:936" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="1166:1187" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="1255:2508" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="1813:2266" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="1888:2045" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="2552:2703" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="2755:2956" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="2822:2944" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="3023:3651" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="3091:3639" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="3160:3506" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="3720:4300" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="3790:4288" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="4360:4642" ph="{...}" />
-                <marker date="1561561189871" expanded="true" signature="4430:4629" ph="{...}" />
+                <marker date="1559516247437" expanded="false" signature="6:128" ph="..." />
+                <marker date="1559516247437" expanded="true" signature="170:982" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="177:228" ph="/* [Route(&quot;api/[controller]&quot;)] ... */" />
+                <marker date="1559516247437" expanded="true" signature="279:980" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="384:458" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="561:609" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="706:726" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="838:858" ph="{...}" />
+                <marker date="1559516247437" expanded="true" signature="954:974" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Startup.cs">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/VehicleController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="63" column="66" lean-forward="true" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
+            <state relative-caret-position="227">
+              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
-                <marker date="1561995881557" expanded="false" signature="6:774" ph="..." />
-                <marker date="1561995881557" expanded="true" signature="804:3803" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="831:3801" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="890:953" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="1176:2902" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="1656:1853" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="1885:2322" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="2076:2307" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="3090:3795" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="3137:3214" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="3231:3434" ph="{...}" />
-                <marker date="1561995881557" expanded="true" signature="3469:3705" ph="{...}" />
+                <marker date="1561332065177" expanded="false" signature="6:225" ph="..." />
+                <marker date="1561332065177" expanded="true" signature="267:1587" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="321:1585" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="442:508" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="552:656" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="752:863" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="981:1114" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="1231:1364" ph="{...}" />
+                <marker date="1561332065177" expanded="true" signature="1473:1579" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="298">
+              <caret line="70" column="63" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
               <folding>
-                <marker date="1562000498523" expanded="true" signature="6:225" ph="..." />
-                <marker date="1562000498523" expanded="true" signature="267:1671" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="373:1669" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="494:573" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="635:739" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="835:946" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="1064:1197" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="1314:1447" ph="{...}" />
-                <marker date="1562000498523" expanded="true" signature="1556:1662" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="6:774" ph="..." />
+                <marker date="1562240286480" expanded="true" signature="844:4179" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="871:4177" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="930:993" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="1216:3278" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="1696:1893" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="1925:2362" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="2116:2347" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="3466:4171" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="3513:3590" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="3607:3810" ph="{...}" />
+                <marker date="1562240286480" expanded="true" signature="3845:4081" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/ArrivalService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+            <state relative-caret-position="64">
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
               <folding>
-                <marker date="1562000487303" expanded="true" signature="6:304" ph="..." />
-                <marker date="1562000487303" expanded="true" signature="346:2191" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="469:2189" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="575:635" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="694:789" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="876:975" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="1084:1205" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="1313:1434" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="1534:1631" ph="{...}" />
-                <marker date="1562000487303" expanded="true" signature="1763:2182" ph="{...}" />
+                <marker date="1560353608020" expanded="false" signature="6:435" ph="..." />
+                <marker date="1560353608020" expanded="true" signature="474:2822" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="539:2820" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="724:744" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="794:955" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1016:1232" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1086:1220" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1311:1841" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1382:1829" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1457:1687" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1920:2449" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="1990:2437" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="2515:2812" ph="{...}" />
+                <marker date="1560353608020" expanded="true" signature="2585:2799" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="15" column="76" lean-forward="true" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+              <folding>
+                <marker date="1562240277864" expanded="false" signature="6:406" ph="..." />
+                <marker date="1562240277864" expanded="true" signature="490:3269" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="569:3267" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="768:788" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="852:1041" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="1123:1374" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="1200:1362" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="1481:2105" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="1559:2093" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="1648:1930" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="2205:2849" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="2275:2837" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="2929:3260" ph="{...}" />
+                <marker date="1562240277864" expanded="true" signature="2999:3248" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <marker date="1562240237267" expanded="false" signature="6:429" ph="..." />
+                <marker date="1562240237267" expanded="true" signature="468:2421" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="527:2419" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="706:726" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="770:919" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="971:1172" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1038:1160" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1239:1625" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1307:1613" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1376:1480" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1695:2069" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="1765:2057" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="2129:2411" ph="{...}" />
+                <marker date="1562240237267" expanded="true" signature="2199:2398" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <marker date="1562240236719" expanded="false" signature="6:429" ph="..." />
+                <marker date="1562240236719" expanded="true" signature="468:3039" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="527:3037" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="706:726" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="770:919" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="971:1172" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="1038:1160" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="1239:1931" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="1307:1919" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="1376:1786" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="2001:2687" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="2071:2675" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="2747:3029" ph="{...}" />
+                <marker date="1562240236719" expanded="true" signature="2817:3016" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <marker date="1562240233327" expanded="false" signature="6:431" ph="..." />
+                <marker date="1562240233327" expanded="true" signature="470:2668" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="531:2666" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="712:732" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="778:931" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="986:1192" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1054:1180" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1263:1753" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1332:1741" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1403:1605" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1826:2309" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="1896:2297" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="2371:2658" ph="{...}" />
+                <marker date="1562240233327" expanded="true" signature="2441:2645" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -132,8 +232,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state relative-caret-position="48">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding>
                 <marker date="1560353608020" expanded="false" signature="6:435" ph="..." />
                 <marker date="1560353608020" expanded="true" signature="474:2675" ph="{...}" />
@@ -154,6 +254,31 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding>
+                <marker date="1562240296076" expanded="false" signature="6:433" ph="..." />
+                <marker date="1562240296076" expanded="true" signature="472:2529" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="535:2527" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="718:738" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="786:943" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1001:1212" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1070:1200" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1287:1698" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1357:1686" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1430:1547" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1774:2166" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="1844:2154" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="2230:2521" ph="{...}" />
+                <marker date="1562240296076" expanded="true" signature="2300:2509" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -165,30 +290,42 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Core/DefaultDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/BaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/Interface/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/TechnicalReviewService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Core/Entities/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Core/Entities/Ride.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Core/DefaultDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/BaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/CourseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Models/ViewModels/User/UserVM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Models/ViewModels/TechnicalReview/TechnicalReviewVM.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Core/Entities/BusStop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/ArrivalController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/LineController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/RouteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/FailureController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BaseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/VehicleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopOnRouteController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/Interface/IVehicleService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/FailureService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/Interface/IBusStopService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/VehicleService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/TechnicalReviewController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/Interface/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PublicTransportApi.Services/ArrivalService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -201,16 +338,28 @@
         <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/TechnicalReviewController.cs" />
         <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/FailureController.cs" />
         <option value="$PROJECT_DIR$/PublicTransportApi.Services/TechnicalReviewService.cs" />
-        <option value="$PROJECT_DIR$/PublicTransportApi/Startup.cs" />
         <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/ArrivalController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopOnRouteController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/CourseController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/LineController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Controllers/RouteController.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs" />
+        <option value="$PROJECT_DIR$/PublicTransportApi/Startup.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1920" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="67" />
+    <option name="y" value="27" />
+    <option name="width" value="1853" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -312,12 +461,12 @@
       <workItem from="1560953295762" duration="2971000" />
       <workItem from="1561213790963" duration="8559000" />
       <workItem from="1561553241023" duration="8531000" />
-      <workItem from="1561818218741" duration="4482000" />
+      <workItem from="1561818218741" duration="5581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34840000" />
+    <option name="totallyTimeSpent" value="35939000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,16 +478,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20811099" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21582733" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.3391494" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3297062" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -500,60 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/TechnicalReviewController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
-          <folding>
-            <marker date="1561570704181" expanded="false" signature="6:233" ph="..." />
-            <marker date="1561570704181" expanded="true" signature="275:1954" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="389:1952" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="550:632" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="684:812" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="932:1075" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="1217:1382" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="1523:1688" ph="{...}" />
-            <marker date="1561570704181" expanded="true" signature="1814:1944" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/FailureController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
-          <folding>
-            <marker date="1561572890464" expanded="false" signature="6:225" ph="..." />
-            <marker date="1561572890464" expanded="true" signature="267:1657" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="373:1655" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="494:560" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="621:725" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="821:932" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="1050:1183" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="1300:1433" ph="{...}" />
-            <marker date="1561572890464" expanded="true" signature="1542:1648" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/VehicleController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
-          <folding>
-            <marker date="1561332065177" expanded="false" signature="6:225" ph="..." />
-            <marker date="1561332065177" expanded="true" signature="267:1587" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="321:1585" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="442:508" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="552:656" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="752:863" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="981:1114" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="1231:1364" ph="{...}" />
-            <marker date="1561332065177" expanded="true" signature="1473:1579" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/Interface/IBusStopService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -628,24 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
-          <folding>
-            <marker date="1560353608024" expanded="false" signature="6:222" ph="..." />
-            <marker date="1560353608024" expanded="true" signature="264:1482" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="315:1480" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="421:481" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="539:634" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="721:820" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="928:1049" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="1157:1278" ph="{...}" />
-            <marker date="1560353608024" expanded="true" signature="1375:1472" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/TechnicalReviewService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -681,29 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <marker date="1560353608020" expanded="false" signature="6:406" ph="..." />
-            <marker date="1560353608020" expanded="true" signature="445:3193" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="493:3191" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="692:712" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="776:965" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="1047:1298" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="1124:1286" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="1405:2029" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="1483:2017" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="1572:1854" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="2129:2773" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="2199:2761" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="2853:3184" ph="{...}" />
-            <marker date="1560353608020" expanded="true" signature="2923:3172" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/UserService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -731,31 +785,241 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Startup.cs">
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/ArrivalController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="63" column="66" lean-forward="true" selection-start-line="63" selection-start-column="66" selection-end-line="63" selection-end-column="66" />
+        <state relative-caret-position="304">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <marker date="1561995881557" expanded="false" signature="6:774" ph="..." />
-            <marker date="1561995881557" expanded="true" signature="804:3803" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="831:3801" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="890:953" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="1176:2902" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="1656:1853" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="1885:2322" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="2076:2307" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="3090:3795" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="3137:3214" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="3231:3434" ph="{...}" />
-            <marker date="1561995881557" expanded="true" signature="3469:3705" ph="{...}" />
+            <marker date="1562239801456" expanded="false" signature="6:225" ph="..." />
+            <marker date="1562239801456" expanded="true" signature="267:1589" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="321:1587" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="442:508" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="552:656" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="752:863" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="981:1114" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="1231:1364" ph="{...}" />
+            <marker date="1562239801456" expanded="true" signature="1473:1579" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BaseController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <marker date="1559516247437" expanded="false" signature="6:271" ph="..." />
+            <marker date="1559516247437" expanded="true" signature="313:1072" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="530:1070" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="652:857" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="927:1062" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <marker date="1562000498523" expanded="true" signature="6:225" ph="..." />
+            <marker date="1562000498523" expanded="true" signature="267:1671" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="373:1669" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="494:573" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="635:739" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="835:946" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="1064:1197" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="1314:1447" ph="{...}" />
+            <marker date="1562000498523" expanded="true" signature="1556:1662" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopOnRouteController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+          <folding>
+            <marker date="1562239816416" expanded="false" signature="6:232" ph="..." />
+            <marker date="1562239816416" expanded="true" signature="274:1886" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="335:1884" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="491:571" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="639:764" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="881:1020" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="1159:1320" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="1458:1619" ph="{...}" />
+            <marker date="1562239816416" expanded="true" signature="1749:1876" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/CourseController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+          <folding>
+            <marker date="1562239827880" expanded="false" signature="6:224" ph="..." />
+            <marker date="1562239827880" expanded="true" signature="266:1566" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="319:1564" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="435:499" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="559:660" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="753:860" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="975:1104" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="1218:1347" ph="{...}" />
+            <marker date="1562239827880" expanded="true" signature="1453:1556" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/FailureController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <marker date="1561572890464" expanded="false" signature="6:225" ph="..." />
+            <marker date="1561572890464" expanded="true" signature="267:1657" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="373:1655" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="494:560" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="621:725" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="821:932" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="1050:1183" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="1300:1433" ph="{...}" />
+            <marker date="1561572890464" expanded="true" signature="1542:1648" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/LineController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <marker date="1562239847673" expanded="false" signature="6:222" ph="..." />
+            <marker date="1562239847673" expanded="true" signature="264:1486" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="315:1484" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="421:481" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="539:634" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="721:820" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="929:1050" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="1158:1279" ph="{...}" />
+            <marker date="1562239847673" expanded="true" signature="1379:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/RideController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="37" column="40" lean-forward="true" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <marker date="1562239859649" expanded="false" signature="6:222" ph="..." />
+            <marker date="1562239859649" expanded="true" signature="264:1486" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="315:1484" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="421:481" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="539:634" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="721:820" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="929:1050" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="1158:1279" ph="{...}" />
+            <marker date="1562239859649" expanded="true" signature="1379:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/RouteController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+          <folding>
+            <marker date="1562239874949" expanded="false" signature="6:223" ph="..." />
+            <marker date="1562239874949" expanded="true" signature="265:1508" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="317:1506" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="428:490" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="532:630" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="720:823" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="935:1060" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="1171:1296" ph="{...}" />
+            <marker date="1562239874949" expanded="true" signature="1399:1499" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/TechnicalReviewController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="39" column="71" selection-start-line="39" selection-start-column="71" selection-end-line="39" selection-end-column="71" />
+          <folding>
+            <marker date="1561570704181" expanded="false" signature="6:233" ph="..." />
+            <marker date="1561570704181" expanded="true" signature="275:1954" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="389:1952" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="550:632" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="684:812" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="932:1075" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="1217:1382" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="1523:1688" ph="{...}" />
+            <marker date="1561570704181" expanded="true" signature="1814:1944" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <marker date="1562000487303" expanded="false" signature="6:304" ph="..." />
+            <marker date="1562000487303" expanded="true" signature="346:2191" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="469:2189" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="575:635" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="694:789" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="876:975" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="1084:1205" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="1313:1434" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="1534:1631" ph="{...}" />
+            <marker date="1562000487303" expanded="true" signature="1763:2182" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/ValuesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1559516247437" expanded="false" signature="6:128" ph="..." />
+            <marker date="1559516247437" expanded="true" signature="170:982" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="177:228" ph="/* [Route(&quot;api/[controller]&quot;)] ... */" />
+            <marker date="1559516247437" expanded="true" signature="279:980" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="384:458" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="561:609" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="706:726" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="838:858" ph="{...}" />
+            <marker date="1559516247437" expanded="true" signature="954:974" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/VehicleController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <marker date="1561332065177" expanded="false" signature="6:225" ph="..." />
+            <marker date="1561332065177" expanded="true" signature="267:1587" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="321:1585" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="442:508" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="552:656" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="752:863" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="981:1114" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="1231:1364" ph="{...}" />
+            <marker date="1561332065177" expanded="true" signature="1473:1579" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="48">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <marker date="1560353608020" expanded="false" signature="6:435" ph="..." />
             <marker date="1560353608020" expanded="true" signature="474:2675" ph="{...}" />
@@ -775,39 +1039,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/UserController.cs">
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/ArrivalService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        <state relative-caret-position="64">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
           <folding>
-            <marker date="1562000487303" expanded="true" signature="6:304" ph="..." />
-            <marker date="1562000487303" expanded="true" signature="346:2191" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="469:2189" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="575:635" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="694:789" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="876:975" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="1084:1205" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="1313:1434" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="1534:1631" ph="{...}" />
-            <marker date="1562000487303" expanded="true" signature="1763:2182" ph="{...}" />
+            <marker date="1560353608020" expanded="false" signature="6:435" ph="..." />
+            <marker date="1560353608020" expanded="true" signature="474:2822" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="539:2820" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="724:744" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="794:955" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1016:1232" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1086:1220" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1311:1841" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1382:1829" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1457:1687" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1920:2449" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="1990:2437" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="2515:2812" ph="{...}" />
+            <marker date="1560353608020" expanded="true" signature="2585:2799" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Controllers/BusStopController.cs">
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/CourseService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+        <state relative-caret-position="48">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
           <folding>
-            <marker date="1562000498523" expanded="true" signature="6:225" ph="..." />
-            <marker date="1562000498523" expanded="true" signature="267:1671" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="373:1669" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="494:573" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="635:739" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="835:946" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="1064:1197" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="1314:1447" ph="{...}" />
-            <marker date="1562000498523" expanded="true" signature="1556:1662" ph="{...}" />
+            <marker date="1562240296076" expanded="false" signature="6:433" ph="..." />
+            <marker date="1562240296076" expanded="true" signature="472:2529" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="535:2527" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="718:738" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="786:943" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1001:1212" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1070:1200" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1287:1698" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1357:1686" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1430:1547" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1774:2166" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="1844:2154" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="2230:2521" ph="{...}" />
+            <marker date="1562240296076" expanded="true" signature="2300:2509" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/RouteService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <marker date="1562240233327" expanded="false" signature="6:431" ph="..." />
+            <marker date="1562240233327" expanded="true" signature="470:2668" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="531:2666" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="712:732" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="778:931" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="986:1192" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1054:1180" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1263:1753" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1332:1741" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1403:1605" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1826:2309" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="1896:2297" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="2371:2658" ph="{...}" />
+            <marker date="1562240233327" expanded="true" signature="2441:2645" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/RideService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <marker date="1562240236719" expanded="false" signature="6:429" ph="..." />
+            <marker date="1562240236719" expanded="true" signature="468:3039" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="527:3037" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="706:726" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="770:919" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="971:1172" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="1038:1160" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="1239:1931" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="1307:1919" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="1376:1786" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="2001:2687" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="2071:2675" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="2747:3029" ph="{...}" />
+            <marker date="1562240236719" expanded="true" signature="2817:3016" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/LineService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding>
+            <marker date="1562240237267" expanded="false" signature="6:429" ph="..." />
+            <marker date="1562240237267" expanded="true" signature="468:2421" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="527:2419" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="706:726" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="770:919" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="971:1172" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1038:1160" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1239:1625" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1307:1613" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1376:1480" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1695:2069" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="1765:2057" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="2129:2411" ph="{...}" />
+            <marker date="1562240237267" expanded="true" signature="2199:2398" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi.Services/BusStopOnRouteService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="15" column="76" lean-forward="true" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+          <folding>
+            <marker date="1562240277864" expanded="false" signature="6:406" ph="..." />
+            <marker date="1562240277864" expanded="true" signature="490:3269" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="569:3267" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="768:788" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="852:1041" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="1123:1374" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="1200:1362" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="1481:2105" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="1559:2093" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="1648:1930" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="2205:2849" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="2275:2837" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="2929:3260" ph="{...}" />
+            <marker date="1562240277864" expanded="true" signature="2999:3248" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PublicTransportApi/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="70" column="63" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
+          <folding>
+            <marker date="1562240286480" expanded="true" signature="6:774" ph="..." />
+            <marker date="1562240286480" expanded="true" signature="844:4179" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="871:4177" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="930:993" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="1216:3278" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="1696:1893" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="1925:2362" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="2116:2347" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="3466:4171" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="3513:3590" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="3607:3810" ph="{...}" />
+            <marker date="1562240286480" expanded="true" signature="3845:4081" ph="{...}" />
           </folding>
         </state>
       </provider>

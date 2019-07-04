@@ -9,10 +9,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using PublicTransportApi.Services.Interface;
 
 namespace PublicTransportApi.Services
 {
-    class BusStopOnRouteService : BaseService
+    public class BusStopOnRouteService : BaseService, IBusStopOnRouteService
     {
         public BusStopOnRouteService(DefaultDbContext dbContext, ILogger<BusStopOnRouteService> logger, IHttpContextAccessor httpContextAccessor) : base(dbContext, logger, httpContextAccessor)
         {

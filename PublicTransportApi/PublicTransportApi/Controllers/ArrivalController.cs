@@ -28,7 +28,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _arrivalService.GetArrival(arrivalId), r => r.Arrival);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateArrival([FromBody]ArrivalVM arrivalViewModel)
         {
             return GetResult(() => _arrivalService.CreateArrival(arrivalViewModel.MapToArrivalModel()), r => r);
@@ -40,7 +40,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _arrivalService.UpdateArrival(arrivalViewModel.MapToArrivalModel()), r => r);
         }
 
-        [HttpGet, Route("{arrivalId}/delete")]
+        [HttpDelete, Route("{arrivalId}/delete")]
         public IActionResult DeleteArrival(int arrivalId)
         {
             return GetResult(() => _arrivalService.DeleteArrival(arrivalId), r => r);

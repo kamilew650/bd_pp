@@ -20,6 +20,7 @@ using PublicTransportApi.Common.Configurations;
 using PublicTransportApi.Services.Interface;
 using PublicTransportApi.Services;
 using Microsoft.AspNetCore.Http;
+using PublicTransportApi.Core.Entities;
 
 namespace PublicTransportApi
 {
@@ -63,6 +64,11 @@ namespace PublicTransportApi
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IBusStopService, BusStopService>();
             services.AddScoped<IVehicleService, VehicleService>();
+            services.AddScoped<IArrivalService, ArrivalService >();
+            services.AddScoped<IBusStopOnRouteService, BusStopOnRouteService>();
+            services.AddScoped<ILineService, LineService>();
+            services.AddScoped<IRideService, RideService >();
+            services.AddScoped<IRouteService, RouteService >();
             services.AddScoped<IFailureService, FailureService>();
             services.AddScoped<ITechnicalReviewService, TechnicalReviewService>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

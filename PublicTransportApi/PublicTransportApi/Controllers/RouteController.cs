@@ -28,7 +28,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _routeService.GetRoute(routeId), r => r.Route);
         }
 
-        [HttpPut, Route("create")]
+        [HttpPost, Route("create")]
         public IActionResult CreateRoute([FromBody]RouteVM routeViewModel)
         {
             return GetResult(() => _routeService.CreateRoute(routeViewModel.MapToRouteModel()), r => r);
@@ -40,7 +40,7 @@ namespace PublicTransportApi.Controllers
             return GetResult(() => _routeService.UpdateRoute(routeViewModel.MapToRouteModel()), r => r);
         }
 
-        [HttpGet, Route("{routeId}/delete")]
+        [HttpDelete, Route("{routeId}/delete")]
         public IActionResult DeleteRoute(int routeId)
         {
             return GetResult(() => _routeService.DeleteRoute(routeId), r => r);
